@@ -8,6 +8,7 @@ import calendarRouter from "./routes/calendar.js";
 import businessRouter from "./routes/business.js";
 import personalRouter from "./routes/personal.js";
 import quantumRouter from "./routes/quantum.js";
+import projectsRouter from "./routes/projects.js";
 import { readJSON, writeJSON } from "./routes/_util.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -24,6 +25,7 @@ app.use("/api/calendar", calendarRouter);
 app.use("/api/business", businessRouter);
 app.use("/api/personal", personalRouter);
 app.use("/api/quantum", quantumRouter);
+app.use("/api/projects", projectsRouter);
 
 // GHL Webhook — inline since it's a single endpoint
 app.post("/api/ghl-webhook", (req, res) => {

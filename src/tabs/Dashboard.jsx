@@ -22,6 +22,7 @@ export default function Dashboard({ onNavigate }) {
   const { data: taskData, refresh: refreshTasks } = useApi("/api/tasks", 30000);
   const { data: paceData } = useApi("/api/business/pace", 60000);
   const { data: goalsData } = useApi("/api/personal", 60000);
+  const { data: projectData } = useApi("/api/projects", 60000);
   const [quote] = useState(() => QUOTES[Math.floor(Math.random() * QUOTES.length)]);
 
   const tasks = taskData?.tasks || [];
@@ -32,6 +33,7 @@ export default function Dashboard({ onNavigate }) {
   const nextUp = warmest.slice(1);
 
   const totalStreak = (goalsData?.habits || []).reduce((sum, h) => sum + h.streak, 0);
+  const activeAlerts = (projectData?.alerts || []).filter(a => !a.resolved);
 
   return (
     <div className="fade-in">
@@ -52,6 +54,25 @@ export default function Dashboard({ onNavigate }) {
       <div style={{ marginBottom: 20 }}>
         <ProgressBar value={getDayProgress()} max={100} color={C.lime} height={3} />
       </div>
+
+      {/* Alerts */}
+      {activeAlerts.length > 0 && (
+        <Card style={{
+          padding: 14, marginBottom: 16,
+          border: `1px solid ${C.red}30`,
+          background: `${C.red}08`,
+          cursor: "pointer",
+        }} onClick={() => onNavigate("projects")}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: C.red, textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: 6 }}>
+            {activeAlerts.length} Alert{activeAlerts.length > 1 ? "s" : ""}
+          </div>
+          {activeAlerts.slice(0, 2).map(a => (
+            <div key={a.id} style={{ fontSize: 13, color: C.txt2, marginBottom: 4 }}>
+              {a.type === "deadline" ? "⏰" : a.type === "security" ? "🔒" : "⚠️"} {a.text.slice(0, 70)}...
+            </div>
+          ))}
+        </Card>
+      )}
 
       {/* THE ONE THING */}
       {theOneThing ? (

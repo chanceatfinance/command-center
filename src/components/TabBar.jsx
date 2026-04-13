@@ -3,6 +3,7 @@ import { C } from "../styles/tokens";
 const TABS = [
   { key: "dashboard", label: "Home", icon: "⚡" },
   { key: "tasks", label: "Tasks", icon: "✓" },
+  { key: "projects", label: "Hub", icon: "🎯" },
   { key: "business", label: "Biz", icon: "🏦" },
   { key: "personal", label: "Life", icon: "🧬" },
   { key: "calendar", label: "Cal", icon: "📅" },

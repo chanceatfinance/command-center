@@ -1,0 +1,232 @@
+{
+  "projects": [
+    {
+      "id": "p_mortgage",
+      "name": "First Mortgage Deal",
+      "status": "active",
+      "priority": "critical",
+      "icon": "🏦",
+      "color": "#ebff45",
+      "summary": "Close first mortgage deal — 60-day window. 0 pipeline opportunities, pure prospecting phase.",
+      "keyMetrics": {
+        "pipelineLeads": 0,
+        "dealsInProcess": 0,
+        "dealsClosed": 0,
+        "warmLeads": 280
+      },
+      "decisions": [
+        { "date": "2026-04-04", "text": "GHL v2 API integration built with pit- token (NOT v1 rest.gohighlevel.com)" },
+        { "date": "2026-04-11", "text": "GoHighLevel trial expires Apr 17 @ 10:44 PM PDT — must decide: subscribe or cancel" },
+        { "date": "2026-04-11", "text": "Lead Connector + Leadconnector for Gmail granted access to Google Account — verify intentional" }
+      ],
+      "nextActions": [
+        "Pitch 360 Suites tenants — 280 warm contacts waiting",
+        "Send Tier 1 outreach to in-building referral partners (12 drafts ready)",
+        "Decide on GoHighLevel subscription by Apr 17",
+        "Verify Lead Connector Google access was intentional"
+      ],
+      "blockers": [
+        "0 pipeline opportunities — everything depends on outreach",
+        "GHL trial expires Apr 17 — need decision"
+      ],
+      "lastUpdated": "2026-04-13T04:00:00Z"
+    },
+    {
+      "id": "p_content",
+      "name": "Claude Closer Content Launch",
+      "status": "active",
+      "priority": "high",
+      "icon": "📸",
+      "color": "#ff1493",
+      "summary": "Week 1 content sprint: 3 Reels/day (drops to 2 after Sat Apr 12), Facebook groups, Reddit posts. Analytics review scheduled Sun Apr 12.",
+      "keyMetrics": {
+        "reelsPosted": 0,
+        "gumroadViews": 0,
+        "tiktokFollowers": 0,
+        "salesTarget": 2
+      },
+      "decisions": [
+        { "date": "2026-04-08", "text": "Launch schedule: 3 Reels/day for first 4 days, then 2/day ongoing" },
+        { "date": "2026-04-08", "text": "Platforms: TikTok (reels) + Reddit (text posts) + Facebook groups (value posts)" },
+        { "date": "2026-04-12", "text": "Week 1 Analytics Review to determine TikTok vs Reddit winner" }
+      ],
+      "nextActions": [
+        "Post 2 Reels today",
+        "Week 1 Analytics Review (was scheduled Sun Apr 12)",
+        "Facebook Group Post #3 — listing presentation prompt (Wed Apr 15)"
+      ],
+      "blockers": [
+        "Content recording avoidance pattern — first piece marked done Apr 13"
+      ],
+      "lastUpdated": "2026-04-13T04:00:00Z"
+    },
+    {
+      "id": "p_referrals",
+      "name": "Referral Partner Network",
+      "status": "active",
+      "priority": "high",
+      "icon": "🤝",
+      "color": "#a78bfa",
+      "summary": "Build from 2 to 10 active partners. 12 Tier 1 outreach drafts ready (RESPA-compliant). All in-building at 360 Suites.",
+      "keyMetrics": {
+        "activePartners": 2,
+        "target": 10,
+        "draftsReady": 12,
+        "draftsSent": 0
+      },
+      "decisions": [
+        { "date": "2026-04-04", "text": "Tiered outreach strategy: T1 (in-building 12), T2 (all tenants 280), T3 (personal SOI 303), T4 (iCloud 613), T5 (Emilie activation)" },
+        { "date": "2026-04-04", "text": "All drafts RESPA-compliant — no rate promises, lead with value" }
+      ],
+      "nextActions": [
+        "Review and approve Tier 1 outreach drafts (12 partners)",
+        "Send Emilie Dujardin co-marketing email (Tier 5)",
+        "Import tenant contacts to GHL"
+      ],
+      "blockers": [
+        "Drafts pending Chance's explicit approval before send",
+        "GHL contact import not yet done (1,163 contacts)"
+      ],
+      "tier1Partners": [
+        "Fanny Figueroa (Figueroa Realty Group)",
+        "John Karabian (JHK Realty Group)",
+        "Raquel Marchant (Real Estate Mamas LLC)",
+        "Patrick Hartweg (Live Smart Escrow)",
+        "Mary MacGregor (Live Smart Escrow)",
+        "Peter Girgis (Theos Financial Inc)",
+        "Ken Newberry (Triton Wealth Advisors)",
+        "Dan Harutunian (Valley Income and Insurance)",
+        "Renee Spieckermann (RLS Estate Law)",
+        "Crista Hermance (Hermance Law)",
+        "Felicia Jurado (Farmers Insurance)",
+        "Carlos Villalobos (Carlos Villalobos Insurance)"
+      ],
+      "lastUpdated": "2026-04-13T04:00:00Z"
+    },
+    {
+      "id": "p_360suites",
+      "name": "360 Executive Suites",
+      "status": "active",
+      "priority": "medium",
+      "icon": "🏢",
+      "color": "#5ce1ff",
+      "summary": "GM of 4 buildings, ~150 office spaces. Constellation Rd #398 under contract for sale. Fred interested in acquiring larger building.",
+      "keyMetrics": {
+        "buildings": 4,
+        "totalSpaces": 150,
+        "team": 2
+      },
+      "decisions": [
+        { "date": "2026-03-31", "text": "Debbie moving from Smyth to Old Rd for training" },
+        { "date": "2026-03-31", "text": "Josh handles Old Rd + 3 Valencia properties Mon/Thu full-day" },
+        { "date": "2026-03-31", "text": "Constellation Rd #398 for sale and under contract" }
+      ],
+      "nextActions": [
+        "Monitor Constellation Rd sale progress",
+        "Mastermind Workshop at 360 Suites Tue Apr 14 (Ken Keller organizing)"
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-04-13T04:00:00Z"
+    },
+    {
+      "id": "p_quantum",
+      "name": "Quantum Edge v3",
+      "status": "active",
+      "priority": "low",
+      "icon": "📈",
+      "color": "#5eea96",
+      "summary": "Paper trading on Kraken Futures. 6 trades, 66.7% WR, -$5.52 P&L. Need 2+ weeks positive before going live.",
+      "keyMetrics": {
+        "balance": 494.48,
+        "totalPnl": -5.52,
+        "winRate": 66.7,
+        "trades": 6,
+        "mode": "paper"
+      },
+      "decisions": [
+        { "date": "2026-04-05", "text": "v3 rebuilt — Kraken Futures (not spot), long AND short with leverage" },
+        { "date": "2026-04-05", "text": "Trend Following only (EMA 8/21 + ADX > 25). Mean Reversion disabled (poor WR)" },
+        { "date": "2026-04-05", "text": "3x leverage default, 5x max. ATR-based stops (2x SL, 4x TP)" },
+        { "date": "2026-04-05", "text": "v2 files deleted entirely" }
+      ],
+      "nextActions": [
+        "Continue paper trading — minimum 2 weeks positive before live",
+        "Move bot from ~/Desktop/ to avoid macOS TCC LaunchAgent block"
+      ],
+      "blockers": [
+        "Still on ~/Desktop/ — macOS TCC blocks launchd from running there",
+        "Needs manual start currently"
+      ],
+      "lastUpdated": "2026-04-13T04:00:00Z"
+    },
+    {
+      "id": "p_command_center",
+      "name": "Command Center",
+      "status": "active",
+      "priority": "medium",
+      "icon": "⚡",
+      "color": "#ebff45",
+      "summary": "Unified app replacing daily-hq + mortgage-machine. Live on Mac Mini port 3141 + Cloudflare tunnel.",
+      "keyMetrics": {
+        "tabs": 6,
+        "dataFiles": 7,
+        "status": "live"
+      },
+      "decisions": [
+        { "date": "2026-04-12", "text": "Consolidated from 3 systems into 1 React+Express app" },
+        { "date": "2026-04-12", "text": "JSON file storage — any Claude session can read/write" },
+        { "date": "2026-04-12", "text": "Warmest Action algorithm surfaces single most important task" },
+        { "date": "2026-04-13", "text": "Cloudflare quick tunnel for remote access (URL in data/tunnel-url.txt)" }
+      ],
+      "nextActions": [
+        "Add Projects Hub tab (this build)",
+        "Sync calendar data from GCal"
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-04-13T05:00:00Z"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "a_ghl_trial",
+      "type": "deadline",
+      "severity": "high",
+      "text": "GoHighLevel trial expires Apr 17 @ 10:44 PM PDT — subscribe or cancel",
+      "dueDate": "2026-04-17",
+      "resolved": false
+    },
+    {
+      "id": "a_security_1",
+      "type": "security",
+      "severity": "medium",
+      "text": "Lead Connector + Leadconnector for Gmail granted access to Google Account — verify intentional",
+      "dueDate": "2026-04-13",
+      "resolved": false
+    },
+    {
+      "id": "a_security_2",
+      "type": "security",
+      "severity": "medium",
+      "text": "Google account recovery event Apr 5 — verify at myaccount.google.com",
+      "dueDate": null,
+      "resolved": false
+    },
+    {
+      "id": "a_tue_overlap",
+      "type": "schedule",
+      "severity": "medium",
+      "text": "Tue Apr 14 overlap: Pipeline Meeting 10:30 + Loan Bro 11:00 + Mastermind 12:00",
+      "dueDate": "2026-04-14",
+      "resolved": false
+    }
+  ],
+  "weeklySchedule": {
+    "2026-04-13": ["Post 2 Reels"],
+    "2026-04-14": ["Post 2 Reels", "Pipeline Meeting 10:30 AM", "Loan Bro Meeting 11:00 AM", "360 Suites Mastermind 12:00 PM"],
+    "2026-04-15": ["Post 2 Reels", "Facebook Group Post #3 11:00 AM"],
+    "2026-04-16": ["Post 2 Reels"],
+    "2026-04-17": ["Post 2 Reels", "GHL Trial Expires Tonight"],
+    "2026-04-18": ["Post 2 Reels"]
+  },
+  "lastModified": "2026-04-13T05:00:00Z"
+}

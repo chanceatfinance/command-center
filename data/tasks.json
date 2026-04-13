@@ -6,10 +6,10 @@
       "category": "business",
       "subcategory": "mortgage",
       "priority": "high",
-      "status": "open",
+      "status": "done",
       "dueDate": "2026-04-13",
       "createdAt": "2026-04-12T10:00:00Z",
-      "completedAt": null,
+      "completedAt": "2026-04-13T04:18:35.643Z",
       "notes": ""
     },
     {
@@ -18,10 +18,10 @@
       "category": "business",
       "subcategory": "mortgage",
       "priority": "high",
-      "status": "open",
+      "status": "done",
       "dueDate": null,
       "createdAt": "2026-04-12T10:00:00Z",
-      "completedAt": null,
+      "completedAt": "2026-04-13T04:18:25.539Z",
       "notes": "Consistent avoidance — just do 1"
     },
     {
@@ -49,5 +49,5 @@
       "notes": ""
     }
   ],
-  "lastModified": "2026-04-12T10:00:00Z"
+  "lastModified": "2026-04-13T04:18:35.643Z"
 }

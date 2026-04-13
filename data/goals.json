@@ -47,11 +47,54 @@
     }
   ],
   "habits": [
-    { "id": "h_gym", "name": "Gym", "icon": "💪", "streak": 0, "lastDate": null, "history": [] },
-    { "id": "h_leads", "name": "Check leads", "icon": "📱", "streak": 0, "lastDate": null, "history": [] },
-    { "id": "h_content", "name": "Post content", "icon": "📸", "streak": 0, "lastDate": null, "history": [] },
-    { "id": "h_family", "name": "Quality family time", "icon": "👨‍👩‍👧", "streak": 0, "lastDate": null, "history": [] },
-    { "id": "h_water", "name": "Drink water", "icon": "💧", "streak": 0, "lastDate": null, "history": [] }
+    {
+      "id": "h_gym",
+      "name": "Gym",
+      "icon": "💪",
+      "streak": 1,
+      "lastDate": "2026-04-13",
+      "history": [
+        "2026-04-13"
+      ]
+    },
+    {
+      "id": "h_leads",
+      "name": "Check leads",
+      "icon": "📱",
+      "streak": 1,
+      "lastDate": "2026-04-13",
+      "history": [
+        "2026-04-13"
+      ]
+    },
+    {
+      "id": "h_content",
+      "name": "Post content",
+      "icon": "📸",
+      "streak": 0,
+      "lastDate": null,
+      "history": []
+    },
+    {
+      "id": "h_family",
+      "name": "Quality family time",
+      "icon": "👨‍👩‍👧",
+      "streak": 1,
+      "lastDate": "2026-04-13",
+      "history": [
+        "2026-04-13"
+      ]
+    },
+    {
+      "id": "h_water",
+      "name": "Drink water",
+      "icon": "💧",
+      "streak": 1,
+      "lastDate": "2026-04-13",
+      "history": [
+        "2026-04-13"
+      ]
+    }
   ],
-  "lastModified": null
+  "lastModified": "2026-04-13T04:19:26.383Z"
 }
