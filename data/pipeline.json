@@ -1,0 +1,57 @@
+{
+  "all": [
+    {
+      "id": "ASoiBVQWIgQx1rHQgr1x",
+      "name": "Partner Pipeline",
+      "stages": [
+        { "id": "cd8e39b7-ac97-467b-a821-1e6be9400825", "name": "New Inquiry", "count": 0 },
+        { "id": "d7ca7a14-94fe-413b-b819-3bf45e94561a", "name": "Call Scheduled", "count": 0 },
+        { "id": "3964022b-dc28-4100-9c50-516f7bfeef84", "name": "Partnership Active", "count": 0 },
+        { "id": "c075de36-56f8-4a60-960c-deed5a1fc68a", "name": "Referrals Coming In", "count": 0 },
+        { "id": "58d195eb-950c-4c6f-8fcc-38793632d4a8", "name": "Inactive", "count": 0 }
+      ]
+    },
+    {
+      "id": "1qnvIlOUoTLNcPXssCOF",
+      "name": "Purchase Pipeline",
+      "stages": [
+        { "id": "7ca16f11-769d-4d08-9d22-7adb7fae0c6d", "name": "New Lead", "count": 0 },
+        { "id": "40958983-4184-4131-a34e-5cb986c2844e", "name": "Contacted", "count": 0 },
+        { "id": "062a8456-cfa8-4a89-90a0-2a243a466b06", "name": "Pre-Qual Call Scheduled", "count": 0 },
+        { "id": "748cd62d-18ee-49d0-b243-c4f2462ba545", "name": "Pre-Approved", "count": 0 },
+        { "id": "1adb5caf-059a-4e14-9bd5-7f41055d2df6", "name": "In Process", "count": 0 },
+        { "id": "82601a2f-da89-48c1-afa9-b55d0f63f8d0", "name": "Closed Won", "count": 0 },
+        { "id": "68b4f0e1-ef24-4ef6-8cb5-2d742600fead", "name": "Lost/Dead", "count": 0 }
+      ]
+    },
+    {
+      "id": "5KkspoSIxmVQUdWlCKUw",
+      "name": "Refinance Pipeline",
+      "stages": [
+        { "id": "30c96707-36ff-4556-927f-e90d31753774", "name": "New Refi Lead", "count": 0 },
+        { "id": "0a3eb064-844c-4655-a329-deecf58ad51f", "name": "Contacted", "count": 0 },
+        { "id": "125ddd32-a4bf-4111-ac99-d276dedfb321", "name": "Rate Quoted", "count": 0 },
+        { "id": "f1f67ee0-4507-4649-b863-8ef4ade9d488", "name": "Application Submitted", "count": 0 },
+        { "id": "bfb260b2-f251-4e5b-a44f-60deb4b952f4", "name": "In Underwriting", "count": 0 },
+        { "id": "dff9f56a-9faa-474b-992d-c31128b6f935", "name": "Closed Won", "count": 0 },
+        { "id": "0aa1324f-3e0c-4e69-b7ee-cf933a242fa7", "name": "Lost/Dead", "count": 0 }
+      ]
+    },
+    {
+      "id": "I3lJnIdfUJs3g0yGe5Xt",
+      "name": "Second Opinion Pipeline",
+      "stages": [
+        { "id": "12a7505f-b9bf-465b-b943-ec6ad8d8d1fd", "name": "Urgent Review", "count": 0 },
+        { "id": "681719b2-f381-46dd-abe2-8ea2d0a31e15", "name": "Deal Reviewed", "count": 0 },
+        { "id": "874c6371-37fe-4889-a360-bc051a9180e5", "name": "Competing Offer Sent", "count": 0 },
+        { "id": "b0ff39b0-2023-46de-b830-616068d965bf", "name": "Decision Pending", "count": 0 },
+        { "id": "fc509051-079e-449c-a723-a7003deabbe0", "name": "Processing", "count": 0 },
+        { "id": "d5bdc268-5935-4d19-80cc-8077154ba189", "name": "Closed Won", "count": 0 },
+        { "id": "b4192ce0-d0b1-41a3-a1d2-095c98e54dec", "name": "Lost/No Switch", "count": 0 }
+      ]
+    }
+  ],
+  "mortgage": ["1qnvIlOUoTLNcPXssCOF", "5KkspoSIxmVQUdWlCKUw", "I3lJnIdfUJs3g0yGe5Xt"],
+  "referral": ["ASoiBVQWIgQx1rHQgr1x"],
+  "discoveredAt": "2026-04-04T18:38:59.484Z"
+}

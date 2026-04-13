@@ -1,0 +1,23 @@
+{
+  "partners": [
+    {
+      "id": "rp_001",
+      "name": "Emilie Dujardin",
+      "company": "Keller Williams Santa Clarita",
+      "type": "Realtor",
+      "status": "active",
+      "lastTouch": null,
+      "notes": "Key partner, buyer referrals"
+    },
+    {
+      "id": "rp_002",
+      "name": "Rafferty Yao",
+      "company": "Pinnacle Solutions",
+      "type": "Financial Advisor",
+      "status": "active",
+      "lastTouch": null,
+      "notes": ""
+    }
+  ],
+  "lastModified": null
+}

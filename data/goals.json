@@ -1,0 +1,57 @@
+{
+  "goals": [
+    {
+      "id": "g_first_deal",
+      "area": "financial",
+      "title": "Close first mortgage deal",
+      "target": 1,
+      "current": 0,
+      "unit": "deal",
+      "icon": "🏦"
+    },
+    {
+      "id": "g_200k",
+      "area": "financial",
+      "title": "$200K gross in 2026",
+      "target": 200000,
+      "current": 0,
+      "unit": "dollars",
+      "icon": "💰"
+    },
+    {
+      "id": "g_fitness",
+      "area": "fitness",
+      "title": "EOS 3x per week",
+      "target": 3,
+      "current": 0,
+      "unit": "sessions/week",
+      "icon": "💪"
+    },
+    {
+      "id": "g_content",
+      "area": "business",
+      "title": "Post content 5x per week",
+      "target": 5,
+      "current": 0,
+      "unit": "posts/week",
+      "icon": "📸"
+    },
+    {
+      "id": "g_partners",
+      "area": "business",
+      "title": "Build 10 active referral partners",
+      "target": 10,
+      "current": 2,
+      "unit": "partners",
+      "icon": "🤝"
+    }
+  ],
+  "habits": [
+    { "id": "h_gym", "name": "Gym", "icon": "💪", "streak": 0, "lastDate": null, "history": [] },
+    { "id": "h_leads", "name": "Check leads", "icon": "📱", "streak": 0, "lastDate": null, "history": [] },
+    { "id": "h_content", "name": "Post content", "icon": "📸", "streak": 0, "lastDate": null, "history": [] },
+    { "id": "h_family", "name": "Quality family time", "icon": "👨‍👩‍👧", "streak": 0, "lastDate": null, "history": [] },
+    { "id": "h_water", "name": "Drink water", "icon": "💧", "streak": 0, "lastDate": null, "history": [] }
+  ],
+  "lastModified": null
+}

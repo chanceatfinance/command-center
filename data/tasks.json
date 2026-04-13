@@ -1,0 +1,53 @@
+{
+  "tasks": [
+    {
+      "id": "t_1712956800_001",
+      "text": "Follow up with Emilie Dujardin — buyer referral pipeline",
+      "category": "business",
+      "subcategory": "mortgage",
+      "priority": "high",
+      "status": "open",
+      "dueDate": "2026-04-13",
+      "createdAt": "2026-04-12T10:00:00Z",
+      "completedAt": null,
+      "notes": ""
+    },
+    {
+      "id": "t_1712956800_002",
+      "text": "Record first mortgage content piece (60 sec video or post)",
+      "category": "business",
+      "subcategory": "mortgage",
+      "priority": "high",
+      "status": "open",
+      "dueDate": null,
+      "createdAt": "2026-04-12T10:00:00Z",
+      "completedAt": null,
+      "notes": "Consistent avoidance — just do 1"
+    },
+    {
+      "id": "t_1712956800_003",
+      "text": "Pitch 360 Suites tenants — warm mortgage leads",
+      "category": "business",
+      "subcategory": "mortgage",
+      "priority": "high",
+      "status": "open",
+      "dueDate": null,
+      "createdAt": "2026-04-12T10:00:00Z",
+      "completedAt": null,
+      "notes": "Built-in network of ~150 offices"
+    },
+    {
+      "id": "t_1712956800_004",
+      "text": "Get to EOS — any workout counts",
+      "category": "personal",
+      "subcategory": "fitness",
+      "priority": "medium",
+      "status": "open",
+      "dueDate": null,
+      "createdAt": "2026-04-12T10:00:00Z",
+      "completedAt": null,
+      "notes": ""
+    }
+  ],
+  "lastModified": "2026-04-12T10:00:00Z"
+}
