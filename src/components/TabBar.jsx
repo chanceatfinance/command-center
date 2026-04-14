@@ -23,8 +23,8 @@ export default function TabBar({ active, onSelect }) {
       left: 0,
       right: 0,
       zIndex: 100,
-      overflowX: "auto",
-      WebkitOverflowScrolling: "touch",
+      backdropFilter: "blur(20px)",
+      WebkitBackdropFilter: "blur(20px)",
     }}>
       {TABS.map(t => {
         const isActive = active === t.key;
@@ -33,8 +33,8 @@ export default function TabBar({ active, onSelect }) {
             key={t.key}
             onClick={() => onSelect(t.key)}
             style={{
-              flex: "1 0 auto",
-              minWidth: 52,
+              flex: "1 1 0",
+              minWidth: 0,
               background: "none",
               border: "none",
               color: isActive ? C.lime : C.txt3,

@@ -7,7 +7,7 @@ const QE_DIR = process.env.QE_DIR || "/Users/clawdbot/Desktop/quantum-edge";
 
 const defaultState = {
   version: 3, mode: "paper",
-  stats: { starting_balance: 500, balance: 500, total_trades: 0, total_pnl: 0, total_fees: 0, max_drawdown: 0, win_rate: 0, profit_factor: 0, largest_win: 0, largest_loss: 0, peak_equity: 500 },
+  stats: { starting_balance: 10000, balance: 10000, total_trades: 0, total_pnl: 0, total_fees: 0, max_drawdown: 0, win_rate: 0, profit_factor: 0, largest_win: 0, largest_loss: 0, peak_equity: 10000 },
   positions: [], recent_trades: [], equity_curve: [],
 };
 
