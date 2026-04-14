@@ -79,22 +79,24 @@
       "id": "h_family",
       "name": "Quality family time",
       "icon": "👨‍👩‍👧",
-      "streak": 1,
-      "lastDate": "2026-04-13",
+      "streak": 2,
+      "lastDate": "2026-04-14",
       "history": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ]
     },
     {
       "id": "h_water",
       "name": "Drink water",
       "icon": "💧",
-      "streak": 1,
-      "lastDate": "2026-04-13",
+      "streak": 2,
+      "lastDate": "2026-04-14",
       "history": [
-        "2026-04-13"
+        "2026-04-13",
+        "2026-04-14"
       ]
     }
   ],
-  "lastModified": "2026-04-13T04:19:26.383Z"
+  "lastModified": "2026-04-14T03:44:50.971Z"
 }
