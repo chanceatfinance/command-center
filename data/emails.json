@@ -1,0 +1,100 @@
+{
+  "emails": [
+    {
+      "id": "19d8a28bde2a0fdd",
+      "from": "Render",
+      "fromEmail": "no-reply@render.com",
+      "subject": "Blueprint Sync Failed for command c",
+      "snippet": "A sync failed for your Blueprint command c.",
+      "date": "2026-04-14T04:03:23Z",
+      "category": "system",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    },
+    {
+      "id": "19d8a289502fe77d",
+      "from": "Render",
+      "fromEmail": "no-reply@render.com",
+      "subject": "build failed for command-center-3d04",
+      "snippet": "Build didn't complete. Reason: Exited with status 127.",
+      "date": "2026-04-14T04:03:13Z",
+      "category": "system",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    },
+    {
+      "id": "19d8513983c30469",
+      "from": "GitHub",
+      "fromEmail": "noreply@github.com",
+      "subject": "[GitHub] A third-party GitHub Application has been added to your account",
+      "snippet": "Render was authorized to access your account.",
+      "date": "2026-04-13T04:22:26Z",
+      "category": "security",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    },
+    {
+      "id": "19d84424c0e252bc",
+      "from": "Anthropic, PBC",
+      "fromEmail": "invoice+statements@mail.anthropic.com",
+      "subject": "Your receipt from Anthropic, PBC #2809-7248-1793",
+      "snippet": "Your receipt from Anthropic.",
+      "date": "2026-04-13T00:33:50Z",
+      "category": "billing",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    },
+    {
+      "id": "19d7b624f2a9bb0d",
+      "from": "Google",
+      "fromEmail": "no-reply@accounts.google.com",
+      "subject": "Security alert",
+      "snippet": "You allowed Lead Connector access to some of your Google Account data.",
+      "date": "2026-04-11T07:12:13Z",
+      "category": "security",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    },
+    {
+      "id": "19d7b61de4c965f6",
+      "from": "Google",
+      "fromEmail": "no-reply@accounts.google.com",
+      "subject": "Security alert",
+      "snippet": "You allowed Leadconnector for Gmail access to some of your Google Account data.",
+      "date": "2026-04-11T07:11:43Z",
+      "category": "security",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    },
+    {
+      "id": "19d7b1347a9ecfb2",
+      "from": "HighLevel Inc.",
+      "fromEmail": "trial-ending@gohighlevel.com",
+      "subject": "Your HighLevel Inc. trial ends soon",
+      "snippet": "Your free trial started on Mar 18, 2026 and will end on April 17, 2026 at 10:44:48 PM PDT.",
+      "date": "2026-04-11T05:45:53Z",
+      "category": "action_required",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    },
+    {
+      "id": "19d68748140abef3",
+      "from": "Claude Team",
+      "fromEmail": "no-reply@email.claude.com",
+      "subject": "Tips to get the most out of Claude Code",
+      "snippet": "Here's how some of our power users unlock serious productivity.",
+      "date": "2026-04-07T14:59:18Z",
+      "category": "useful",
+      "unread": true,
+      "labels": ["CATEGORY_UPDATES"]
+    }
+  ],
+  "stats": {
+    "totalUnread": 30,
+    "actionRequired": 1,
+    "security": 3,
+    "promotions": 15,
+    "updates": 8
+  },
+  "synced_at": "2026-04-13T05:30:00Z"
+}

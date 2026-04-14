@@ -9,6 +9,7 @@ import businessRouter from "./routes/business.js";
 import personalRouter from "./routes/personal.js";
 import quantumRouter from "./routes/quantum.js";
 import projectsRouter from "./routes/projects.js";
+import emailsRouter from "./routes/emails.js";
 import { readJSON, writeJSON } from "./routes/_util.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +27,7 @@ app.use("/api/business", businessRouter);
 app.use("/api/personal", personalRouter);
 app.use("/api/quantum", quantumRouter);
 app.use("/api/projects", projectsRouter);
+app.use("/api/emails", emailsRouter);
 
 // GHL Webhook — inline since it's a single endpoint
 app.post("/api/ghl-webhook", (req, res) => {

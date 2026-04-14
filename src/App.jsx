@@ -8,11 +8,13 @@ import Personal from "./tabs/Personal";
 import Calendar from "./tabs/Calendar";
 import QuantumEdge from "./tabs/QuantumEdge";
 import Projects from "./tabs/Projects";
+import Emails from "./tabs/Emails";
 
 const TABS = {
   dashboard: Dashboard,
   tasks: Tasks,
   projects: Projects,
+  emails: Emails,
   business: Business,
   personal: Personal,
   calendar: Calendar,
