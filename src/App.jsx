@@ -766,14 +766,32 @@ export default function App() {
   const tabContent = { home: HomeTab, tasks: TasksTab, hub: HubTab, biz: BizTab, life: LifeTab, cal: CalTab, qe: QETab, score: ScoreTab };
   const ActiveTab = tabContent[tab];
 
-  return <div style={{ fontFamily: font, display: "flex", flexDirection: "column", height: "100dvh", width: "100%", background: CLR.bg, color: CLR.text }}>
-    <div style={{ flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch", padding: "env(safe-area-inset-top, 12px) 14px 8px" }}>
+  return <div style={{ fontFamily: font, display: "flex", flexDirection: "column", height: "100dvh", width: "100%", background: CLR.bg, color: CLR.text, position: "relative", overflow: "hidden" }}>
+    {/* Ambient aurora */}
+    <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden" }}>
+      <div style={{
+        position: "absolute", width: "140%", height: "140%", top: "-20%", left: "-20%",
+        background: `radial-gradient(ellipse at 30% 20%, ${CLR.lime}06 0%, transparent 50%)`,
+        animation: "aurora 20s ease-in-out infinite",
+      }} />
+      <div style={{
+        position: "absolute", width: "140%", height: "140%", top: "-20%", left: "-20%",
+        background: `radial-gradient(ellipse at 70% 60%, ${CLR.cyan}05 0%, transparent 50%)`,
+        animation: "aurora2 25s ease-in-out infinite",
+      }} />
+      <div style={{
+        position: "absolute", width: "140%", height: "140%", top: "-20%", left: "-20%",
+        background: `radial-gradient(ellipse at 50% 80%, ${CLR.purple}04 0%, transparent 45%)`,
+        animation: "aurora3 30s ease-in-out infinite",
+      }} />
+    </div>
+    <div style={{ flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch", padding: "env(safe-area-inset-top, 12px) 14px 8px", position: "relative", zIndex: 1 }}>
       <ActiveTab />
       <div style={{ height: 70 }} />
     </div>
     <nav style={{
       display: "flex", justifyContent: "space-around", padding: "6px 2px env(safe-area-inset-bottom, 6px)",
-      background: CLR.nav, borderTop: `1px solid ${CLR.navBorder}`, position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 100,
+      background: `${CLR.nav}ee`, borderTop: `1px solid ${CLR.navBorder}`, position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 100,
       backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
     }}>
       {TABS.map(t => <button key={t.key} onClick={() => setTab(t.key)} style={{
