@@ -770,19 +770,24 @@ export default function App() {
     {/* Ambient aurora */}
     <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden" }}>
       <div style={{
-        position: "absolute", width: "140%", height: "140%", top: "-20%", left: "-20%",
-        background: `radial-gradient(ellipse at 30% 20%, ${CLR.lime}06 0%, transparent 50%)`,
+        position: "absolute", width: "160%", height: "160%", top: "-30%", left: "-30%",
+        background: "radial-gradient(ellipse at 30% 20%, rgba(235,255,69,0.12) 0%, transparent 55%)",
         animation: "aurora 20s ease-in-out infinite",
       }} />
       <div style={{
-        position: "absolute", width: "140%", height: "140%", top: "-20%", left: "-20%",
-        background: `radial-gradient(ellipse at 70% 60%, ${CLR.cyan}05 0%, transparent 50%)`,
+        position: "absolute", width: "160%", height: "160%", top: "-30%", left: "-30%",
+        background: "radial-gradient(ellipse at 70% 60%, rgba(0,212,255,0.10) 0%, transparent 55%)",
         animation: "aurora2 25s ease-in-out infinite",
       }} />
       <div style={{
-        position: "absolute", width: "140%", height: "140%", top: "-20%", left: "-20%",
-        background: `radial-gradient(ellipse at 50% 80%, ${CLR.purple}04 0%, transparent 45%)`,
+        position: "absolute", width: "160%", height: "160%", top: "-30%", left: "-30%",
+        background: "radial-gradient(ellipse at 50% 80%, rgba(167,139,250,0.08) 0%, transparent 50%)",
         animation: "aurora3 30s ease-in-out infinite",
+      }} />
+      <div style={{
+        position: "absolute", width: "120%", height: "120%", top: "-10%", left: "-10%",
+        background: "radial-gradient(ellipse at 20% 70%, rgba(255,68,68,0.06) 0%, transparent 45%)",
+        animation: "aurora 35s ease-in-out infinite reverse",
       }} />
     </div>
     <div style={{ flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch", padding: "env(safe-area-inset-top, 12px) 14px 8px", position: "relative", zIndex: 1 }}>
