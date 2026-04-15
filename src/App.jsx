@@ -216,12 +216,37 @@ export default function App() {
 
   const income360 = suitesYTD();
 
-  function toggleHabit(id) { setHabits(h => h.map(x => x.id === id ? { ...x, done: !x.done } : x)); }
+  // Habit ↔ XP sync mapping
+  const HABIT_XP_MAP = { h1: "x10", h2: "x7", h3: "x15", h4: "x8", h5: "x3", h6: "x13" };
+  const XP_HABIT_MAP = Object.fromEntries(Object.entries(HABIT_XP_MAP).map(([h, x]) => [x, h]));
+
+  function toggleHabit(id) {
+    setHabits(h => {
+      const updated = h.map(x => x.id === id ? { ...x, done: !x.done } : x);
+      const toggled = updated.find(x => x.id === id);
+      // Sync to XP
+      const xpId = HABIT_XP_MAP[id];
+      if (xpId) {
+        setXpActions(a => {
+          const xpUpdated = a.map(x => x.id === xpId ? { ...x, done: toggled.done } : x);
+          setTotalXP(xpUpdated.filter(x => x.done).reduce((s, x) => s + x.xp, 0));
+          return xpUpdated;
+        });
+      }
+      return updated;
+    });
+  }
   function toggleXP(id) {
     setXpActions(a => {
       const updated = a.map(x => x.id === id ? { ...x, done: !x.done } : x);
       const newTotal = updated.filter(x => x.done).reduce((s, x) => s + x.xp, 0);
       setTotalXP(newTotal);
+      // Sync to Habit
+      const habitId = XP_HABIT_MAP[id];
+      if (habitId) {
+        const toggled = updated.find(x => x.id === id);
+        setHabits(h => h.map(x => x.id === habitId ? { ...x, done: toggled.done } : x));
+      }
       return updated;
     });
   }
