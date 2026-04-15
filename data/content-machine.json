@@ -1,0 +1,349 @@
+{
+  "version": "1.0",
+  "created": "2026-04-15",
+  "owner": "Chance Stevens",
+  "brand": "Chance at Finance",
+
+  "positioning": {
+    "tagline": "I run 150 offices. I also do your mortgage. And I'll walk you through every new build in town.",
+    "uniqueAngle": "Nobody else in Santa Clarita combines executive suite management (200+ tenants), mortgage lending, AND new construction access. That triple lens gives Chance credibility no single-role agent or LO can match.",
+    "audiencePrimary": "First-time homebuyers in Santa Clarita / LA County (25-40, dual income, browsing Zillow at night)",
+    "audienceSecondary": "Move-up buyers considering new construction, real estate agents who need a reliable lender, 360 Suites tenants considering buying",
+    "competitiveEdge": [
+      "Business operator credibility (GM of 150+ offices = understands money, not just loans)",
+      "New construction insider access (walks the actual sites, knows builder promos before public)",
+      "Local authority (lives, works, manages property IN Santa Clarita)",
+      "Dual revenue = no pressure (doesn't need to hard-sell loans because he has W-2 stability)"
+    ]
+  },
+
+  "contentPillars": [
+    {
+      "id": "p1",
+      "name": "New Construction Insider",
+      "icon": "🏗️",
+      "color": "#FF8C00",
+      "weight": 35,
+      "description": "Walk new construction sites. Show floorplans, upgrades, builder promos, what's available. Be the guy who shows people homes before they hit the market.",
+      "formats": ["walkthrough", "talking_head", "comparison", "reveal"],
+      "exampleHooks": [
+        "This builder is offering $40K in incentives right now and nobody's talking about it",
+        "I just walked a $550K new build in Santa Clarita. Let me show you what you get",
+        "New construction vs resale — here's what $600K looks like side by side",
+        "POV: You're touring a brand new home that's not on Zillow yet",
+        "3 things the builder won't tell you about this community (but I will)"
+      ],
+      "bestPerformers": ["@jphou.realty — property walkthroughs", "@glennellisluxuryhomes — luxury build tours", "@heider_realestate — drone + walkthrough combo"]
+    },
+    {
+      "id": "p2",
+      "name": "Mortgage Made Simple",
+      "icon": "🏦",
+      "color": "#EBFF45",
+      "weight": 30,
+      "description": "Break down mortgage concepts in plain English. DPA programs, rate strategies, qualification tips. Position as the LO who explains, not sells.",
+      "formats": ["talking_head", "screen_share", "myth_bust", "breakdown"],
+      "exampleHooks": [
+        "You can buy a home in California with $0 down. Here's how",
+        "Stop Googling mortgage rates. Here's what actually determines YOUR rate",
+        "The $15K grant nobody talks about for first-time buyers in CA",
+        "Your landlord's mortgage is cheaper than your rent. Let me show you the math",
+        "3 things that kill your mortgage approval (and 2 that don't matter)"
+      ],
+      "bestPerformers": ["@whatsamortgage — 354K IG, educational breakdowns", "@theonithelender — 250K TT, approachable tone", "@thatmortgageguy — 1M TT, humor + education", "@the.mortgage.mentor — transparency-first"]
+    },
+    {
+      "id": "p3",
+      "name": "The Operator",
+      "icon": "🏢",
+      "color": "#00D4FF",
+      "weight": 20,
+      "description": "Behind the scenes of running 360 Executive Suites. Business operations, leadership moments, day-in-the-life. Shows credibility and relatability.",
+      "formats": ["day_in_life", "behind_scenes", "talking_head", "tour"],
+      "exampleHooks": [
+        "I manage 150 offices before I start my mortgage day. Here's what that looks like",
+        "Running a business taught me more about money than any finance degree",
+        "POV: You're the GM of 4 commercial buildings at 29",
+        "What managing 200 tenants taught me about people (and real estate)",
+        "A day in my life managing executive suites + closing mortgage deals"
+      ],
+      "bestPerformers": ["@marijuliette — lifestyle + business blend", "@personalbrandlaunch — personal brand coaching"]
+    },
+    {
+      "id": "p4",
+      "name": "Santa Clarita Local",
+      "icon": "📍",
+      "color": "#4ADE80",
+      "weight": 15,
+      "description": "Neighborhood spotlights, market data, local business features, community events. Own the local search.",
+      "formats": ["neighborhood_tour", "market_update", "local_spotlight", "talking_head"],
+      "exampleHooks": [
+        "Thinking about moving to Santa Clarita? Here's what $600K gets you",
+        "The 3 best neighborhoods in SCV for families right now",
+        "Santa Clarita housing market update — here's what's actually happening",
+        "I live and work here. Here's why Santa Clarita is underrated",
+        "New development alert: [Builder] just broke ground in [Area]"
+      ],
+      "bestPerformers": ["@sarahsayala — local market + community spotlights", "@_k.elsie — 84K IG, local authority positioning"]
+    }
+  ],
+
+  "weeklyCalendar": {
+    "monday": {
+      "batch": true,
+      "batchTime": "9:00 AM - 10:30 AM",
+      "batchLocation": "360 Suites creator studio or office",
+      "postsToFilm": 4,
+      "filmingBrief": [
+        "2x Mortgage Made Simple (talking head — hook + 60 sec tip)",
+        "1x The Operator (behind the scenes or day-in-life clip)",
+        "1x Santa Clarita Local (market update or neighborhood feature)"
+      ],
+      "scheduledPosts": [
+        { "time": "11:00 AM", "pillar": "p2", "format": "talking_head", "platforms": ["tiktok", "instagram_reels", "youtube_shorts"] },
+        { "time": "5:00 PM", "pillar": "p3", "format": "behind_scenes", "platforms": ["instagram_stories", "tiktok"] }
+      ]
+    },
+    "tuesday": {
+      "batch": false,
+      "dailyTime": "15 min",
+      "scheduledPosts": [
+        { "time": "10:00 AM", "pillar": "p1", "format": "walkthrough", "platforms": ["tiktok", "instagram_reels", "youtube_shorts"] },
+        { "time": "4:00 PM", "pillar": "p2", "format": "myth_bust", "platforms": ["tiktok", "instagram_reels"] }
+      ],
+      "note": "Repurpose Monday batch footage"
+    },
+    "wednesday": {
+      "batch": false,
+      "dailyTime": "15 min",
+      "scheduledPosts": [
+        { "time": "10:00 AM", "pillar": "p4", "format": "neighborhood_tour", "platforms": ["tiktok", "instagram_reels", "youtube_shorts"] },
+        { "time": "12:00 PM", "pillar": "p2", "format": "talking_head", "platforms": ["linkedin", "facebook"] },
+        { "time": "5:00 PM", "pillar": "p3", "format": "talking_head", "platforms": ["instagram_stories"] }
+      ]
+    },
+    "thursday": {
+      "batch": false,
+      "dailyTime": "15 min",
+      "scheduledPosts": [
+        { "time": "10:00 AM", "pillar": "p1", "format": "reveal", "platforms": ["tiktok", "instagram_reels", "youtube_shorts"] },
+        { "time": "4:00 PM", "pillar": "p2", "format": "breakdown", "platforms": ["tiktok", "instagram_reels"] }
+      ],
+      "note": "New construction walkthrough content day — film at site if available"
+    },
+    "friday": {
+      "batch": true,
+      "batchTime": "1:00 PM - 2:30 PM",
+      "batchLocation": "New construction site OR garage studio",
+      "postsToFilm": 4,
+      "filmingBrief": [
+        "2x New Construction Insider (walkthrough + talking head at site)",
+        "1x Mortgage Made Simple (weekend-ready tip)",
+        "1x Car content (quick take, reaction, or market thought)"
+      ],
+      "scheduledPosts": [
+        { "time": "10:00 AM", "pillar": "p3", "format": "day_in_life", "platforms": ["tiktok", "instagram_reels"] },
+        { "time": "5:00 PM", "pillar": "p1", "format": "walkthrough", "platforms": ["tiktok", "instagram_reels", "youtube_shorts"] }
+      ]
+    },
+    "saturday": {
+      "batch": false,
+      "dailyTime": "0 min (pre-scheduled)",
+      "scheduledPosts": [
+        { "time": "10:00 AM", "pillar": "p1", "format": "comparison", "platforms": ["tiktok", "instagram_reels", "youtube_shorts"] },
+        { "time": "2:00 PM", "pillar": "p4", "format": "local_spotlight", "platforms": ["instagram_reels", "facebook"] }
+      ],
+      "note": "All pre-scheduled from batch sessions. Day off from filming."
+    },
+    "sunday": {
+      "batch": false,
+      "dailyTime": "0 min (pre-scheduled)",
+      "scheduledPosts": [
+        { "time": "11:00 AM", "pillar": "p2", "format": "talking_head", "platforms": ["tiktok", "instagram_reels"] }
+      ],
+      "note": "Light day. One post pre-scheduled. Rest."
+    }
+  },
+
+  "weeklyTotals": {
+    "totalPosts": 13,
+    "platformBreakdown": {
+      "tiktok": 11,
+      "instagram_reels": 11,
+      "youtube_shorts": 6,
+      "instagram_stories": 3,
+      "linkedin": 1,
+      "facebook": 2,
+      "x": 0,
+      "threads": 0
+    },
+    "pillarBreakdown": {
+      "newConstruction": 4,
+      "mortgageMadeSimple": 5,
+      "theOperator": 2,
+      "santaClaritaLocal": 2
+    },
+    "filmingTime": "3 hours/week (two 90-min batch sessions)",
+    "dailyActiveTime": "15 min Mon-Fri (stories, replies, spontaneous content)",
+    "weekendTime": "0 min (everything pre-scheduled)"
+  },
+
+  "automationPipeline": {
+    "step1_film": {
+      "what": "Batch film raw footage",
+      "when": "Monday 9-10:30 AM + Friday 1-2:30 PM",
+      "where": "360 Suites studio, new construction sites, garage, car",
+      "output": "8-10 raw clips per week uploaded to Google Drive folder",
+      "chanceTime": "3 hours/week"
+    },
+    "step2_upload": {
+      "what": "Drop raw clips into Google Drive 'Content Machine' folder",
+      "when": "Immediately after filming",
+      "how": "Phone auto-upload or manual drag",
+      "chanceTime": "2 min"
+    },
+    "step3_edit": {
+      "what": "CapCut Pro auto-edit: trim, captions, transitions, format for vertical",
+      "when": "Same day or next morning",
+      "how": "CapCut batch import → auto-caption → trending template → export all sizes",
+      "automation": "CapCut AI handles 90% — just review and export",
+      "chanceTime": "20 min/batch (review only)"
+    },
+    "step4_script": {
+      "what": "Claude generates captions, hashtags, and posting copy for each clip",
+      "when": "After editing, before scheduling",
+      "how": "Claude reads content-machine.json calendar, generates platform-specific copy",
+      "automation": "100% automated via Claude session or scheduled agent",
+      "chanceTime": "0 min"
+    },
+    "step5_schedule": {
+      "what": "Upload edited clips to Metricool, schedule across all 7 platforms",
+      "when": "Monday morning (for the week)",
+      "how": "Metricool bulk upload → drag to calendar slots → auto-post",
+      "chanceTime": "15 min/week"
+    },
+    "step6_engage": {
+      "what": "Reply to comments, DMs, engage with target accounts",
+      "when": "15 min/day Mon-Fri",
+      "how": "Phone — respond to comments, answer DMs, engage with builder/realtor posts",
+      "chanceTime": "75 min/week"
+    }
+  },
+
+  "analyticsAudit": {
+    "frequency": "Weekly (Sunday evening via Sunday Reset agent) + Monthly deep dive",
+    "weeklyMetrics": [
+      "Total views across all platforms",
+      "Engagement rate (likes + comments + shares / views)",
+      "Follower growth (net new per platform)",
+      "Top performing post (by views)",
+      "Top performing post (by engagement rate)",
+      "Worst performing post",
+      "DMs received / leads generated",
+      "Which pillar performed best",
+      "Which format performed best",
+      "Which posting time performed best"
+    ],
+    "monthlyDeepDive": [
+      "Month-over-month growth rate per platform",
+      "Content pillar performance ranking (views, engagement, leads)",
+      "Format performance ranking (walkthrough vs talking head vs comparison etc)",
+      "Hook analysis — which opening lines drove highest retention",
+      "Audience demographics shift",
+      "Competitor benchmark — compare growth rate to tracked creators",
+      "Lead attribution — any deals or inquiries traceable to content",
+      "Posting time optimization — best days and times from data",
+      "Content gaps — what topics got asked about but not covered",
+      "Next month adjustments — shift pillar weights based on performance"
+    ],
+    "auditProcess": {
+      "step1": "Export analytics from each platform (or use Metricool unified dashboard)",
+      "step2": "Paste or upload data into Claude session",
+      "step3": "Claude analyzes against content-machine.json targets and prior weeks",
+      "step4": "Claude outputs: what worked, what didn't, specific adjustments for next week",
+      "step5": "Claude updates content-machine.json with new pillar weights, format preferences, and hook patterns",
+      "step6": "Next week's content calendar auto-adjusts based on learnings"
+    },
+    "kpis": {
+      "week1_4": {
+        "goal": "Establish consistency. 13 posts/week minimum.",
+        "tiktokFollowers": "650 → 1,000",
+        "igFollowers": "1,900 → 2,500",
+        "avgViews": "500+ per post",
+        "leads": "1-2 DM inquiries"
+      },
+      "month2": {
+        "goal": "Find winning format. Double down on top pillar.",
+        "tiktokFollowers": "1,000 → 2,500",
+        "igFollowers": "2,500 → 4,000",
+        "avgViews": "1,000+ per post",
+        "leads": "3-5 DM inquiries/week"
+      },
+      "month3": {
+        "goal": "First content-sourced deal. Viral breakout attempt.",
+        "tiktokFollowers": "2,500 → 5,000",
+        "igFollowers": "4,000 → 7,000",
+        "avgViews": "2,000+ per post",
+        "leads": "5-10 DM inquiries/week",
+        "deals": "1 closed deal attributed to content"
+      }
+    }
+  },
+
+  "hookLibrary": {
+    "patternsFromTopCreators": [
+      { "pattern": "Controversy opener", "example": "Everyone says you need 20% down. They're lying.", "source": "@thatmortgageguy" },
+      { "pattern": "POV format", "example": "POV: You're touring a $500K new build that's not on Zillow", "source": "@heider_realestate" },
+      { "pattern": "Math reveal", "example": "Your rent is $2,400. A mortgage on the same house? $2,100.", "source": "@whatsamortgage" },
+      { "pattern": "Secret/insider", "example": "This builder is running a promo they don't advertise", "source": "new construction niche" },
+      { "pattern": "Direct challenge", "example": "If you're renting in Santa Clarita, watch this", "source": "@theonithelender" },
+      { "pattern": "Before/after", "example": "What $550K looked like 2 years ago vs today", "source": "market update format" },
+      { "pattern": "List format", "example": "3 new construction communities in SCV you need to know about", "source": "local authority" },
+      { "pattern": "Personal story", "example": "I filed bankruptcy and still built a mortgage business. Here's how.", "source": "authenticity play — Chance's real story" },
+      { "pattern": "Reaction", "example": "A builder just offered THIS to buyers and I had to share it", "source": "trend reaction" },
+      { "pattern": "Walkthrough narration", "example": "Let me walk you through the best value new build in Santa Clarita right now", "source": "@jphou.realty style" }
+    ],
+    "chanceSpecificHooks": [
+      "I manage 150 offices and do mortgages. Here's why that matters for YOUR home purchase.",
+      "I just toured [Builder]'s newest community. Here's what nobody else will tell you.",
+      "I went through bankruptcy and now I help people buy homes. Real talk.",
+      "New construction in Santa Clarita just dropped. Let me show you inside.",
+      "Most loan officers read about real estate. I live in it every day — here's the difference.",
+      "Stop scrolling Zillow. This new build isn't on there yet but it should be.",
+      "The builder is paying $40K toward your closing costs right now. Here's the catch.",
+      "I manage 200 tenants. Half of them should be homeowners. Here's why.",
+      "Your Realtor won't show you this because it's not on MLS.",
+      "New construction vs resale in Santa Clarita — I'll show you both."
+    ]
+  },
+
+  "competitorTracker": [
+    { "handle": "@whatsamortgage", "platform": "IG/TT", "followers": "354K/215K", "niche": "Mortgage education", "postingFreq": "10x/week", "strength": "Makes complex math simple, high volume" },
+    { "handle": "@thatmortgageguy", "platform": "TT", "followers": "~1M", "niche": "Mortgage humor + education", "postingFreq": "5-7x/week", "strength": "Stitches trending content, massive reach" },
+    { "handle": "@theonithelender", "platform": "IG/TT", "followers": "33K/250K", "niche": "Mortgage tips, approachable", "postingFreq": "daily", "strength": "Relatable 'not your daddy's lender' brand" },
+    { "handle": "@officialdavidbronner", "platform": "IG", "followers": "9.5K", "niche": "RE content coaching", "postingFreq": "3-5x/week", "strength": "Teaches agents how to create content" },
+    { "handle": "@_k.elsie", "platform": "IG", "followers": "84K", "niche": "Realtor personal brand", "postingFreq": "4-5x/week", "strength": "Clean brand, local authority" },
+    { "handle": "@personalbrandlaunch", "platform": "IG", "followers": "1M", "niche": "Personal brand coaching", "postingFreq": "daily", "strength": "System for growing on social — study their framework" },
+    { "handle": "@themortgagekitchen", "platform": "TT", "followers": "unknown", "niche": "Mortgage hacks", "postingFreq": "3x/week", "strength": "Short punchy hack format" },
+    { "handle": "@martinhrndzrealestate", "platform": "IG/TT", "followers": "unknown", "niche": "RE agent content", "postingFreq": "varies", "strength": "Bilingual content reach" },
+    { "handle": "@the.mortgage.mentor", "platform": "TT", "followers": "growing", "niche": "Mortgage transparency", "postingFreq": "regular", "strength": "Trust-first positioning" },
+    { "handle": "@mortgagemandy", "platform": "TT", "followers": "growing", "niche": "Mortgage skits", "postingFreq": "4-6x/week", "strength": "Dual character skits make education entertaining" },
+    { "handle": "@californiamortgage", "platform": "TT", "followers": "50K+", "niche": "CA market + Fed translations", "postingFreq": "3x/week", "strength": "Local CA angle — direct competitor positioning" }
+  ],
+
+  "compliance": {
+    "required": "NMLS# 2529600 in bio on all platforms. DRE# 02245979 where applicable.",
+    "rules": [
+      "Never quote specific rates in content",
+      "Never promise loan approval or specific terms",
+      "DPA program mentions require disclaimer: 'Subject to eligibility. Contact me for details.'",
+      "Client stories require written consent before posting",
+      "Builder incentive mentions: 'Promotions subject to change. Verify directly with builder.'",
+      "No guarantees on closing timelines",
+      "RESPA: No quid pro quo with referral partners on camera"
+    ]
+  },
+
+  "lastAudit": null,
+  "lastUpdated": "2026-04-15"
+}
