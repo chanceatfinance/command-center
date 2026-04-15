@@ -90,11 +90,13 @@ const DEFAULT_TASKS = [
   { id: "t10", text: "Get to EOS — any workout counts", cat: "personal", priority: "high", status: "todo" },
   { id: "t11", text: "Schedule Marek Health baseline labs", cat: "personal", priority: "low", status: "todo" },
   { id: "t12", text: "CA smog check + DMV renewal by June 2", cat: "personal", priority: "low", status: "todo", due: "2026-06-02" },
+  { id: "t13", text: "Content Machine — build out strategy (coming soon)", cat: "mortgage", priority: "medium", status: "todo" },
 ];
 const DEFAULT_HABITS = [
   { id: "h1", name: "Gym", icon: "💪", done: false },
   { id: "h2", name: "Check leads", icon: "📱", done: false },
   { id: "h3", name: "Prospecting", icon: "🎯", done: false },
+  { id: "h6", name: "Content", icon: "🎬", done: false },
   { id: "h4", name: "Family time", icon: "👨‍👩‍👧", done: false },
   { id: "h5", name: "Drink water", icon: "💧", done: false },
 ];
@@ -108,6 +110,7 @@ const DEFAULT_XP_ACTIONS = [
   { id: "x7", pillar: "entrepreneur", name: "Revenue-generating activity", xp: 20, done: false },
   { id: "x8", pillar: "entrepreneur", name: "Prospecting call or email", xp: 10, done: false },
   { id: "x9", pillar: "entrepreneur", name: "Lead follow-up", xp: 15, done: false },
+  { id: "x15", pillar: "entrepreneur", name: "Content machine post (coming soon)", xp: 10, done: false },
   { id: "x10", pillar: "health", name: "Gym session", xp: 20, done: false },
   { id: "x11", pillar: "health", name: "100oz water", xp: 10, done: false },
   { id: "x12", pillar: "health", name: "No junk food today", xp: 10, done: false },
@@ -370,6 +373,7 @@ export default function App() {
     const projects = [
       { name: "First Mortgage Deal", color: CLR.red, priority: "critical", desc: "Close first mortgage deal — 60-day window. 0 pipeline opportunities." },
       { name: "Referral Partners", color: CLR.orange, priority: "high", desc: "Build from 2 to 10. 12 Tier 1 outreach drafts ready." },
+      { name: "Content Machine", color: CLR.orange, priority: "medium", desc: "Real estate content strategy — coming soon. Will integrate with Command Center." },
       { name: "360 Executive Suites", color: CLR.lime, priority: "medium", desc: "GM of 4 buildings. Constellation Rd #398 under contract." },
     ];
     return <>
@@ -456,6 +460,7 @@ export default function App() {
       { icon: "💰", title: "$200K gross in 2026", cur: income360, max: 200000, color: CLR.lime, fmt: true },
       { icon: "💪", title: "EOS 3x per week", cur: 0, max: 3, color: CLR.green },
       { icon: "📞", title: "5 prospecting touches/week", cur: 0, max: 5, color: CLR.cyan },
+      { icon: "🎬", title: "Content machine (coming soon)", cur: 0, max: 1, color: CLR.orange },
       { icon: "🤝", title: "10 referral partners", cur: 2, max: 10, color: CLR.purple },
     ];
     return <>
