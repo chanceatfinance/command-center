@@ -17,13 +17,20 @@ const PRIO_CLR = { critical: CLR.red, high: CLR.orange, medium: CLR.lime, low: C
 const font = "'SF Pro Display',-apple-system,system-ui,sans-serif";
 
 // ── Styles ──────────────────────────────────────────────────────────
+const glass = {
+  background: "rgba(255,255,255,0.04)",
+  backdropFilter: "blur(40px) saturate(180%)",
+  WebkitBackdropFilter: "blur(40px) saturate(180%)",
+  border: "1px solid rgba(255,255,255,0.08)",
+  boxShadow: "0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)",
+};
 const S = {
-  card: { background: CLR.card, border: `1px solid ${CLR.border}`, borderRadius: 12, padding: 14, marginBottom: 10 },
-  stat: (c) => ({ flex: 1, textAlign: "center", padding: 10, background: "#1a1a1a", borderRadius: 10, border: `1px solid ${c}33` }),
-  pill: (c) => ({ display: "inline-block", padding: "2px 8px", borderRadius: 4, fontSize: 10, fontWeight: 700, textTransform: "uppercase", background: c + "22", color: c, marginRight: 4 }),
+  card: { ...glass, borderRadius: 16, padding: 14, marginBottom: 10 },
+  stat: (c) => ({ flex: 1, textAlign: "center", padding: 10, ...glass, borderRadius: 14, border: `1px solid ${c}25` }),
+  pill: (c) => ({ display: "inline-block", padding: "2px 8px", borderRadius: 6, fontSize: 10, fontWeight: 700, textTransform: "uppercase", background: c + "18", color: c, marginRight: 4, backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)" }),
   section: { fontSize: 11, fontWeight: 700, color: "#888", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 8, marginTop: 16 },
   bar: (pct, c) => ({ height: 6, borderRadius: 3, background: CLR.border, overflow: "hidden", children: null }),
-  btn: (active) => ({ padding: "6px 12px", borderRadius: 8, border: `1px solid ${active ? CLR.lime : CLR.border}`, background: active ? CLR.lime + "18" : "transparent", color: active ? CLR.lime : CLR.muted, fontSize: 11, fontWeight: 600, cursor: "pointer", fontFamily: font }),
+  btn: (active) => ({ padding: "6px 12px", borderRadius: 10, border: `1px solid ${active ? CLR.lime + "44" : "rgba(255,255,255,0.08)"}`, background: active ? CLR.lime + "15" : "rgba(255,255,255,0.04)", color: active ? CLR.lime : CLR.muted, fontSize: 11, fontWeight: 600, cursor: "pointer", fontFamily: font, backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)" }),
 };
 function Bar({ pct, color = CLR.lime, h = 6 }) {
   return <div style={{ height: h, borderRadius: h / 2, background: CLR.border, overflow: "hidden" }}>
@@ -444,7 +451,7 @@ export default function App() {
         <span onClick={() => deleteTask(t.id)} style={{ cursor: "pointer", color: CLR.muted, fontSize: 16 }}>×</span>
       </div>)}
       {showAddTask && <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.7)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 200, padding: 16 }}>
-        <div style={{ ...S.card, background: "#1a1a1a", width: "100%", maxWidth: 400 }} onClick={e => e.stopPropagation()}>
+        <div style={{ ...S.card, background: "rgba(20,20,20,0.85)", width: "100%", maxWidth: 400 }} onClick={e => e.stopPropagation()}>
           <h3 style={{ fontSize: 16, fontWeight: 600, marginBottom: 12 }}>Add Task</h3>
           <input value={newTask.text} onChange={e => setNewTask({ ...newTask, text: e.target.value })} placeholder="What needs to get done?" onKeyDown={e => e.key === "Enter" && addTask()}
             style={{ width: "100%", padding: 10, background: CLR.card, border: `1px solid ${CLR.border}`, borderRadius: 8, color: CLR.text, fontSize: 14, outline: "none", fontFamily: font, marginBottom: 10, boxSizing: "border-box" }} autoFocus />
@@ -566,7 +573,7 @@ export default function App() {
       <div style={{ display: "flex", gap: 8, marginBottom: 16, flexWrap: "wrap" }}>
         {habits.map(h => <div key={h.id} onClick={() => toggleHabit(h.id)} style={{
           flex: "1 0 60px", textAlign: "center", padding: 12, borderRadius: 12, cursor: "pointer",
-          background: h.done ? `${CLR.green}15` : CLR.card, border: `1px solid ${h.done ? CLR.green + "44" : CLR.border}`, transition: "all 0.2s",
+          background: h.done ? `${CLR.green}12` : "rgba(255,255,255,0.04)", backdropFilter: "blur(40px) saturate(180%)", WebkitBackdropFilter: "blur(40px) saturate(180%)", border: `1px solid ${h.done ? CLR.green + "33" : "rgba(255,255,255,0.08)"}`, boxShadow: "0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)", transition: "all 0.2s",
         }}>
           <div style={{ fontSize: 22 }}>{h.icon}</div>
           <div style={{ fontSize: 10, color: h.done ? CLR.green : CLR.muted, fontWeight: 600, marginTop: 2 }}>{h.name}</div>
@@ -631,7 +638,7 @@ export default function App() {
           const isActive = calDay === d;
           return <button key={d} onClick={() => setCalDay(d)} style={{
             flex: "1 0 42px", padding: "8px 4px", borderRadius: 10, cursor: "pointer", textAlign: "center", fontFamily: font,
-            background: isActive ? `${CLR.lime}15` : CLR.card, border: `1px solid ${isActive ? CLR.lime : CLR.border}`, color: isActive ? CLR.lime : CLR.text,
+            background: isActive ? `${CLR.lime}12` : "rgba(255,255,255,0.04)", backdropFilter: "blur(30px)", WebkitBackdropFilter: "blur(30px)", border: `1px solid ${isActive ? CLR.lime + "44" : "rgba(255,255,255,0.08)"}`, color: isActive ? CLR.lime : CLR.text,
           }}>
             <div style={{ fontSize: 10, color: isActive ? CLR.lime : CLR.muted }}>{dt.toLocaleDateString("en-US", { weekday: "short" })}</div>
             <div style={{ fontSize: 18, fontWeight: 700 }}>{dt.getDate()}</div>
@@ -740,7 +747,7 @@ export default function App() {
           <div style={{ fontSize: 12, fontWeight: 600, color: p.color, marginBottom: 6 }}>{p.icon} {p.label}</div>
           {actions.map(a => <div key={a.id} onClick={() => toggleXP(a.id)} style={{
             ...S.card, display: "flex", alignItems: "center", gap: 10, cursor: "pointer", padding: 12,
-            background: a.done ? `${CLR.green}10` : CLR.card, border: `1px solid ${a.done ? CLR.green + "33" : CLR.border}`,
+            background: a.done ? `${CLR.green}10` : "rgba(255,255,255,0.04)", backdropFilter: "blur(40px) saturate(180%)", WebkitBackdropFilter: "blur(40px) saturate(180%)", border: `1px solid ${a.done ? CLR.green + "33" : "rgba(255,255,255,0.08)"}`, boxShadow: "0 4px 30px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.06)",
           }}>
             <span style={{ fontSize: 16 }}>{a.done ? "✅" : "⬜"}</span>
             <span style={{ flex: 1, fontSize: 13 }}>{a.name}</span>
@@ -806,8 +813,8 @@ export default function App() {
     </div>
     <nav style={{
       display: "flex", justifyContent: "space-around", padding: "6px 2px env(safe-area-inset-bottom, 6px)",
-      background: `${CLR.nav}ee`, borderTop: `1px solid ${CLR.navBorder}`, position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 100,
-      backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+      background: "rgba(10,10,10,0.6)", borderTop: "1px solid rgba(255,255,255,0.06)", position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 100,
+      backdropFilter: "blur(40px) saturate(180%)", WebkitBackdropFilter: "blur(40px) saturate(180%)",
     }}>
       {TABS.map(t => <button key={t.key} onClick={() => setTab(t.key)} style={{
         background: "none", border: "none", color: tab === t.key ? CLR.lime : CLR.muted,
