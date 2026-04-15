@@ -153,41 +153,55 @@ const ALERTS = [
   { id: "a4", text: "Tue Apr 14: Pipeline 10:30 + Loan Bro 11:00 + Mastermind 12:00 overlap", priority: "high", due: "2026-04-14" },
 ];
 
-// ── Load/Save State ─────────────────────────────────────────────────
-const KEY = "cc_v2_state";
-function loadState() {
-  try { const s = localStorage.getItem(KEY); return s ? JSON.parse(s) : null; } catch { return null; }
-}
-function saveState(state) {
-  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch {}
+// ── API-backed State (cross-device persistence) ────────────────────
+const API = "/api/state";
+const saveTimer = { current: null };
+
+function saveToAPI(state) {
+  clearTimeout(saveTimer.current);
+  saveTimer.current = setTimeout(() => {
+    fetch(API, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(state),
+    }).catch(() => {});
+  }, 500); // debounce 500ms to avoid hammering on rapid taps
 }
 
 // ════════════════════════════════════════════════════════════════════
 // APP
 // ════════════════════════════════════════════════════════════════════
 export default function App() {
-  const saved = loadState();
   const [tab, setTab] = useState("home");
-  const [tasks, setTasks] = useState(saved?.tasks || DEFAULT_TASKS);
-  const [habits, setHabits] = useState(saved?.habits || DEFAULT_HABITS);
-  const [xpActions, setXpActions] = useState(saved?.xpActions || DEFAULT_XP_ACTIONS);
-  const [totalXP, setTotalXP] = useState(saved?.totalXP || 0);
+  const [tasks, setTasks] = useState(DEFAULT_TASKS);
+  const [habits, setHabits] = useState(DEFAULT_HABITS);
+  const [xpActions, setXpActions] = useState(DEFAULT_XP_ACTIONS);
+  const [totalXP, setTotalXP] = useState(0);
+  const [loaded, setLoaded] = useState(false);
   const [calDay, setCalDay] = useState(new Date().toISOString().slice(0, 10));
   const [showAddTask, setShowAddTask] = useState(false);
   const [newTask, setNewTask] = useState({ text: "", cat: "mortgage", priority: "medium" });
+
+  // Load state from server on mount
+  useEffect(() => {
+    fetch(API).then(r => r.json()).then(data => {
+      if (data.tasks?.length) setTasks(data.tasks);
+      if (data.habits?.length) setHabits(data.habits);
+      if (data.xpActions?.length) setXpActions(data.xpActions);
+      if (data.totalXP) setTotalXP(data.totalXP);
+      setLoaded(true);
+    }).catch(() => setLoaded(true)); // offline fallback to defaults
+  }, []);
 
   const level = Math.floor(totalXP / 100) + 1;
   const xpInLevel = totalXP % 100;
   const todayXP = xpActions.filter(a => a.done).reduce((s, a) => s + a.xp, 0);
   const totalPossibleXP = xpActions.reduce((s, a) => s + a.xp, 0);
 
-  // Persist
-  useEffect(() => { saveState({ tasks, habits, xpActions, totalXP }); }, [tasks, habits, xpActions, totalXP]);
-
-  // Also sync tasks to backend for Claude session access
+  // Save to server on every change (debounced)
   useEffect(() => {
-    fetch("/api/tasks", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tasks, lastModified: new Date().toISOString() }) }).catch(() => {});
-  }, [tasks]);
+    if (loaded) saveToAPI({ tasks, habits, xpActions, totalXP });
+  }, [tasks, habits, xpActions, totalXP, loaded]);
 
   const todayStr = new Date().toISOString().slice(0, 10);
   const openTasks = tasks.filter(t => t.status !== "done");
