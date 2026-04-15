@@ -767,27 +767,37 @@ export default function App() {
   const ActiveTab = tabContent[tab];
 
   return <div style={{ fontFamily: font, display: "flex", flexDirection: "column", height: "100dvh", width: "100%", background: CLR.bg, color: CLR.text, position: "relative", overflow: "hidden" }}>
-    {/* Ambient aurora */}
-    <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden" }}>
+    {/* Floating orbs */}
+    <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden", filter: "blur(60px)" }}>
       <div style={{
-        position: "absolute", width: "160%", height: "160%", top: "-30%", left: "-30%",
-        background: "radial-gradient(ellipse at 30% 20%, rgba(235,255,69,0.12) 0%, transparent 55%)",
-        animation: "aurora 20s ease-in-out infinite",
+        position: "absolute", width: 220, height: 220, borderRadius: "50%",
+        background: "rgba(235,255,69,0.18)",
+        top: "10%", left: "15%",
+        animation: "aurora 18s ease-in-out infinite",
       }} />
       <div style={{
-        position: "absolute", width: "160%", height: "160%", top: "-30%", left: "-30%",
-        background: "radial-gradient(ellipse at 70% 60%, rgba(0,212,255,0.10) 0%, transparent 55%)",
-        animation: "aurora2 25s ease-in-out infinite",
+        position: "absolute", width: 180, height: 180, borderRadius: "50%",
+        background: "rgba(0,212,255,0.15)",
+        top: "45%", right: "5%",
+        animation: "aurora2 22s ease-in-out infinite",
       }} />
       <div style={{
-        position: "absolute", width: "160%", height: "160%", top: "-30%", left: "-30%",
-        background: "radial-gradient(ellipse at 50% 80%, rgba(167,139,250,0.08) 0%, transparent 50%)",
-        animation: "aurora3 30s ease-in-out infinite",
+        position: "absolute", width: 200, height: 200, borderRadius: "50%",
+        background: "rgba(167,139,250,0.14)",
+        bottom: "15%", left: "25%",
+        animation: "aurora3 26s ease-in-out infinite",
       }} />
       <div style={{
-        position: "absolute", width: "120%", height: "120%", top: "-10%", left: "-10%",
-        background: "radial-gradient(ellipse at 20% 70%, rgba(255,68,68,0.06) 0%, transparent 45%)",
-        animation: "aurora 35s ease-in-out infinite reverse",
+        position: "absolute", width: 150, height: 150, borderRadius: "50%",
+        background: "rgba(255,107,157,0.10)",
+        top: "65%", right: "30%",
+        animation: "aurora 30s ease-in-out infinite reverse",
+      }} />
+      <div style={{
+        position: "absolute", width: 160, height: 160, borderRadius: "50%",
+        background: "rgba(255,140,0,0.10)",
+        top: "25%", right: "20%",
+        animation: "aurora2 20s ease-in-out infinite reverse",
       }} />
     </div>
     <div style={{ flex: 1, overflowY: "auto", WebkitOverflowScrolling: "touch", padding: "env(safe-area-inset-top, 12px) 14px 8px", position: "relative", zIndex: 1 }}>
