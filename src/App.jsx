@@ -96,30 +96,31 @@ const DEFAULT_TASKS = [
   { id: "t16", text: "Friday batch film: 2 new construction walkthroughs + 1 mortgage + 1 car clip", cat: "mortgage", priority: "high", status: "todo" },
 ];
 const DEFAULT_HABITS = [
-  { id: "h1", name: "Gym", icon: "💪", done: false },
-  { id: "h2", name: "Check leads", icon: "📱", done: false },
-  { id: "h3", name: "Prospecting", icon: "🎯", done: false },
-  { id: "h6", name: "Content", icon: "🎬", done: false },
-  { id: "h4", name: "Family time", icon: "👨‍👩‍👧", done: false },
-  { id: "h5", name: "Drink water", icon: "💧", done: false },
+  { id: "h1", name: "5:15 Workout", icon: "💪", done: false },
+  { id: "h2", name: "Mortgage block", icon: "🏦", done: false },
+  { id: "h3", name: "Content posted", icon: "🎬", done: false },
+  { id: "h4", name: "Prospecting", icon: "🎯", done: false },
+  { id: "h5", name: "Family time", icon: "👨‍👩‍👧", done: false },
+  { id: "h6", name: "Read/Yoga", icon: "📖", done: false },
 ];
 const DEFAULT_XP_ACTIONS = [
-  { id: "x1", pillar: "dad", name: "Floor time with daughter", xp: 15, done: false },
-  { id: "x2", pillar: "dad", name: "Bedtime routine", xp: 10, done: false },
-  { id: "x3", pillar: "husband", name: "Date night / quality time", xp: 20, done: false },
+  { id: "x1", pillar: "dad", name: "Avery bath + bedtime routine", xp: 15, done: false },
+  { id: "x2", pillar: "dad", name: "Quality playtime with Avery", xp: 15, done: false },
+  { id: "x3", pillar: "husband", name: "Dinner with Tatum (phone away)", xp: 15, done: false },
   { id: "x4", pillar: "husband", name: "Thoughtful gesture for Tatum", xp: 15, done: false },
-  { id: "x5", pillar: "friend", name: "Reach out to Kris or a friend", xp: 10, done: false },
+  { id: "x5", pillar: "friend", name: "Reach out to a friend", xp: 10, done: false },
   { id: "x6", pillar: "friend", name: "Help someone without being asked", xp: 15, done: false },
-  { id: "x7", pillar: "entrepreneur", name: "Revenue-generating activity", xp: 20, done: false },
+  { id: "x7", pillar: "entrepreneur", name: "7-8:15 AM mortgage block completed", xp: 20, done: false },
   { id: "x8", pillar: "entrepreneur", name: "Prospecting call or email", xp: 10, done: false },
-  { id: "x9", pillar: "entrepreneur", name: "Lead follow-up", xp: 15, done: false },
-  { id: "x15", pillar: "entrepreneur", name: "Posted content today", xp: 10, done: false },
-  { id: "x16", pillar: "entrepreneur", name: "Batch filmed content", xp: 20, done: false },
-  { id: "x10", pillar: "health", name: "Gym session", xp: 20, done: false },
-  { id: "x11", pillar: "health", name: "100oz water", xp: 10, done: false },
-  { id: "x12", pillar: "health", name: "No junk food today", xp: 10, done: false },
-  { id: "x13", pillar: "faith", name: "Gratitude / prayer / meditation", xp: 15, done: false },
-  { id: "x14", pillar: "faith", name: "Read / listen to something uplifting", xp: 10, done: false },
+  { id: "x9", pillar: "entrepreneur", name: "Lead follow-up in GHL", xp: 15, done: false },
+  { id: "x15", pillar: "entrepreneur", name: "Content edited + posted", xp: 10, done: false },
+  { id: "x16", pillar: "entrepreneur", name: "Batch filmed (Mon/Fri)", xp: 20, done: false },
+  { id: "x10", pillar: "health", name: "5:15 AM workout completed", xp: 20, done: false },
+  { id: "x17", pillar: "health", name: "Protein shakes (AM + PM)", xp: 10, done: false },
+  { id: "x11", pillar: "health", name: "Electrolytes + creatine", xp: 5, done: false },
+  { id: "x12", pillar: "health", name: "Clean meals all day", xp: 10, done: false },
+  { id: "x13", pillar: "faith", name: "9:30 PM read or yoga", xp: 15, done: false },
+  { id: "x14", pillar: "faith", name: "Gratitude / prayer / meditation", xp: 10, done: false },
 ];
 const PILLARS = [
   { key: "dad", icon: "👨‍👧", label: "Dad", color: CLR.pink },
@@ -292,6 +293,51 @@ export default function App() {
         <div style={{ fontSize: 11, color: CLR.muted, marginTop: 4 }}>360 W-2: {fmtK(income360)} · Mortgage: $0</div>
       </div>
 
+      {/* Daily Schedule */}
+      {(() => {
+        const SCHED = [
+          { time: "5:00", label: "Electrolytes + creatine", icon: "💧", block: "health" },
+          { time: "5:15", label: "Workout", icon: "💪", block: "health" },
+          { time: "6:10", label: "Protein shake + vitamins + shower", icon: "🥤", block: "health" },
+          { time: "6:30", label: "Take dogs out", icon: "🐕", block: "personal" },
+          { time: "7:00", label: "Mortgage debrief / work / content", icon: "🏦", block: "business" },
+          { time: "8:15", label: "Breakfast — protein yogurt + coffee", icon: "☕", block: "personal" },
+          { time: "8:30", label: "Edit + post content", icon: "🎬", block: "business" },
+          { time: "9:00", label: "360 Suites", icon: "🏢", block: "suites" },
+          { time: "12:30", label: "Home — take dogs out", icon: "🐕", block: "personal" },
+          { time: "1:00", label: "Lunch + 360 Suites PM", icon: "🏢", block: "suites" },
+          { time: "5:00", label: "Take dogs out", icon: "🐕", block: "personal" },
+          { time: "6:00", label: "Dinner + family time", icon: "👨‍👩‍👧", block: "family" },
+          { time: "8:30", label: "Avery bath", icon: "🛁", block: "family" },
+          { time: "9:00", label: "Protein shake", icon: "🥤", block: "health" },
+          { time: "9:30", label: "Read / yoga", icon: "📖", block: "faith" },
+          { time: "10:00", label: "Bed", icon: "😴", block: "personal" },
+        ];
+        const blockColor = { health: CLR.green, business: CLR.lime, suites: CLR.cyan, personal: CLR.muted, family: CLR.pink, faith: "#FB923C" };
+        const nowH = new Date().getHours(), nowM = new Date().getMinutes();
+        const nowTotal = nowH * 60 + nowM;
+        return <div style={S.card}>
+          <div style={S.section}>Daily Schedule</div>
+          {SCHED.map((s, i) => {
+            const [h, m] = s.time.split(":").map(Number);
+            const sTotal = h * 60 + m;
+            const nextTotal = i < SCHED.length - 1 ? (() => { const [nh, nm] = SCHED[i+1].time.split(":").map(Number); return nh * 60 + nm; })() : 1440;
+            const isCurrent = nowTotal >= sTotal && nowTotal < nextTotal;
+            const isPast = nowTotal >= nextTotal;
+            return <div key={i} style={{
+              display: "flex", alignItems: "center", gap: 8, padding: "5px 0",
+              borderLeft: isCurrent ? `3px solid ${CLR.lime}` : "3px solid transparent",
+              paddingLeft: 8, opacity: isPast ? 0.4 : 1,
+              background: isCurrent ? `${CLR.lime}08` : "transparent", borderRadius: isCurrent ? 6 : 0,
+            }}>
+              <span style={{ fontSize: 10, color: blockColor[s.block] || CLR.muted, fontWeight: 600, minWidth: 38 }}>{s.time}</span>
+              <span style={{ fontSize: 12 }}>{s.icon}</span>
+              <span style={{ fontSize: 12, color: isCurrent ? CLR.text : CLR.muted }}>{s.label}</span>
+            </div>;
+          })}
+        </div>;
+      })()}
+
       <div style={{ display: "flex", gap: 8, marginBottom: 10 }}>
         <div style={{ ...S.card, flex: 1, textAlign: "center" }}>
           <div style={{ fontSize: 24 }}>💍</div>
@@ -302,7 +348,7 @@ export default function App() {
         </div>
         <div style={{ ...S.card, flex: 1, textAlign: "center" }}>
           <div style={{ fontSize: 24 }}>👶</div>
-          <div style={{ fontSize: 13, fontWeight: 600 }}>Baby girl</div>
+          <div style={{ fontSize: 13, fontWeight: 600 }}>Avery</div>
           <div style={{ fontSize: 10, color: CLR.muted }}>{babyAge()}</div>
           <div style={{ fontSize: 10, color: CLR.muted }}>Born July 15, 2025</div>
         </div>
@@ -499,7 +545,7 @@ export default function App() {
         </div>
         <div style={{ ...S.card, flex: 1, textAlign: "center" }}>
           <div style={{ fontSize: 24 }}>👶</div>
-          <div style={{ fontSize: 13, fontWeight: 600 }}>Baby girl</div>
+          <div style={{ fontSize: 13, fontWeight: 600 }}>Avery</div>
           <div style={{ fontSize: 10, color: CLR.muted }}>{babyAge()}</div>
           <div style={{ fontSize: 10, color: CLR.muted }}>Born July 15, 2025</div>
         </div>
