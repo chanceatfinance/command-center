@@ -82,14 +82,11 @@ const dailyIndex = () => Math.floor(Date.now() / 86400000);
 // ── Default Data ────────────────────────────────────────────────────
 const DEFAULT_TASKS = [
   { id: "t1", text: "Close first mortgage deal — 60 day sprint", cat: "mortgage", priority: "critical", status: "doing", due: "2026-06-14" },
-  { id: "t2", text: "Post 2 Reels today", cat: "mortgage", priority: "high", status: "todo" },
-  { id: "t3", text: "Facebook Group Post #3", cat: "mortgage", priority: "high", status: "todo" },
   { id: "t4", text: "Send 12 Tier 1 referral partner outreach drafts", cat: "mortgage", priority: "high", status: "todo" },
   { id: "t5", text: "GoHighLevel — subscribe or cancel by Apr 17", cat: "mortgage", priority: "critical", status: "todo", due: "2026-04-17" },
   { id: "t6", text: "Verify Lead Connector + Gmail access", cat: "mortgage", priority: "medium", status: "todo" },
   { id: "t7", text: "Verify Google account recovery event Apr 5", cat: "personal", priority: "medium", status: "todo" },
   { id: "t8", text: "Constellation Rd #398 — new building under contract", cat: "suites", priority: "medium", status: "doing" },
-  { id: "t9", text: "Reddit Post #5 — r/realtors", cat: "mortgage", priority: "medium", status: "todo", due: "2026-04-19" },
   { id: "t10", text: "Get to EOS — any workout counts", cat: "personal", priority: "high", status: "todo" },
   { id: "t11", text: "Schedule Marek Health baseline labs", cat: "personal", priority: "low", status: "todo" },
   { id: "t12", text: "CA smog check + DMV renewal by June 2", cat: "personal", priority: "low", status: "todo", due: "2026-06-02" },
@@ -97,7 +94,7 @@ const DEFAULT_TASKS = [
 const DEFAULT_HABITS = [
   { id: "h1", name: "Gym", icon: "💪", done: false },
   { id: "h2", name: "Check leads", icon: "📱", done: false },
-  { id: "h3", name: "Post content", icon: "📸", done: false },
+  { id: "h3", name: "Prospecting", icon: "🎯", done: false },
   { id: "h4", name: "Family time", icon: "👨‍👩‍👧", done: false },
   { id: "h5", name: "Drink water", icon: "💧", done: false },
 ];
@@ -109,7 +106,7 @@ const DEFAULT_XP_ACTIONS = [
   { id: "x5", pillar: "friend", name: "Reach out to Kris or a friend", xp: 10, done: false },
   { id: "x6", pillar: "friend", name: "Help someone without being asked", xp: 15, done: false },
   { id: "x7", pillar: "entrepreneur", name: "Revenue-generating activity", xp: 20, done: false },
-  { id: "x8", pillar: "entrepreneur", name: "Content posted", xp: 10, done: false },
+  { id: "x8", pillar: "entrepreneur", name: "Prospecting call or email", xp: 10, done: false },
   { id: "x9", pillar: "entrepreneur", name: "Lead follow-up", xp: 15, done: false },
   { id: "x10", pillar: "health", name: "Gym session", xp: 20, done: false },
   { id: "x11", pillar: "health", name: "100oz water", xp: 10, done: false },
@@ -126,19 +123,10 @@ const PILLARS = [
   { key: "faith", icon: "🙏", label: "Faith", color: "#FB923C" },
 ];
 const DEFAULT_CAL = [
-  { id: "c1", summary: "Post 2 Reels", start: "2026-04-14T09:00:00", end: "2026-04-14T09:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c2", summary: "Pipeline Meeting", start: "2026-04-14T10:30:00", end: "2026-04-14T11:30:00", acct: "chance@affloans.com" },
   { id: "c3", summary: "Loan Bro Meeting", start: "2026-04-14T11:00:00", end: "2026-04-14T11:30:00", acct: "chanceatfinance@gmail.com" },
   { id: "c4", summary: "360 Suites Mastermind Workshop", start: "2026-04-14T12:00:00", end: "2026-04-14T14:00:00", acct: "chance@360suitesla.com" },
-  { id: "c5", summary: "Post 2 Reels", start: "2026-04-15T09:00:00", end: "2026-04-15T09:15:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c6", summary: "Facebook Group Post #3", start: "2026-04-15T11:00:00", end: "2026-04-15T11:15:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c7", summary: "Post 2 Reels", start: "2026-04-16T09:00:00", end: "2026-04-16T09:15:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c8", summary: "Post 2 Reels", start: "2026-04-17T09:00:00", end: "2026-04-17T09:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c9", summary: "GHL Trial Expires Tonight!", start: "2026-04-17T22:44:00", end: "2026-04-17T23:00:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c10", summary: "Post 2 Reels", start: "2026-04-18T09:00:00", end: "2026-04-18T09:15:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c11", summary: "Reddit Post #5 — r/realtors", start: "2026-04-19T10:00:00", end: "2026-04-19T10:15:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c12", summary: "Week 2 Analytics Review", start: "2026-04-19T18:00:00", end: "2026-04-19T18:30:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c13", summary: "Facebook Group Post #4 + #5", start: "2026-04-20T11:00:00", end: "2026-04-20T11:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c14", summary: "Debbie training — Old Rd", start: "2026-04-15T10:00:00", end: "2026-04-15T12:00:00", acct: "chance@360suitesla.com" },
   { id: "c15", summary: "Josh property walkthrough", start: "2026-04-17T09:00:00", end: "2026-04-17T10:00:00", acct: "chance@360suitesla.com" },
 ];
@@ -381,7 +369,6 @@ export default function App() {
   function HubTab() {
     const projects = [
       { name: "First Mortgage Deal", color: CLR.red, priority: "critical", desc: "Close first mortgage deal — 60-day window. 0 pipeline opportunities." },
-      { name: "Content Marketing", color: CLR.orange, priority: "high", desc: "2 Reels/day, Facebook group posts, Reddit distribution for mortgage business." },
       { name: "Referral Partners", color: CLR.orange, priority: "high", desc: "Build from 2 to 10. 12 Tier 1 outreach drafts ready." },
       { name: "360 Executive Suites", color: CLR.lime, priority: "medium", desc: "GM of 4 buildings. Constellation Rd #398 under contract." },
     ];
@@ -468,7 +455,7 @@ export default function App() {
       { icon: "🏦", title: "Close first mortgage deal", cur: 0, max: 1, color: CLR.lime },
       { icon: "💰", title: "$200K gross in 2026", cur: income360, max: 200000, color: CLR.lime, fmt: true },
       { icon: "💪", title: "EOS 3x per week", cur: 0, max: 3, color: CLR.green },
-      { icon: "📸", title: "Post content 5x/week", cur: 0, max: 5, color: CLR.cyan },
+      { icon: "📞", title: "5 prospecting touches/week", cur: 0, max: 5, color: CLR.cyan },
       { icon: "🤝", title: "10 referral partners", cur: 2, max: 10, color: CLR.purple },
     ];
     return <>
