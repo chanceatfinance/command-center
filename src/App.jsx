@@ -82,7 +82,7 @@ const dailyIndex = () => Math.floor(Date.now() / 86400000);
 // ── Default Data ────────────────────────────────────────────────────
 const DEFAULT_TASKS = [
   { id: "t1", text: "Close first mortgage deal — 60 day sprint", cat: "mortgage", priority: "critical", status: "doing", due: "2026-06-14" },
-  { id: "t2", text: "Post 2 Reels today (Claude Closer)", cat: "mortgage", priority: "high", status: "todo" },
+  { id: "t2", text: "Post 2 Reels today", cat: "mortgage", priority: "high", status: "todo" },
   { id: "t3", text: "Facebook Group Post #3", cat: "mortgage", priority: "high", status: "todo" },
   { id: "t4", text: "Send 12 Tier 1 referral partner outreach drafts", cat: "mortgage", priority: "high", status: "todo" },
   { id: "t5", text: "GoHighLevel — subscribe or cancel by Apr 17", cat: "mortgage", priority: "critical", status: "todo", due: "2026-04-17" },
@@ -126,16 +126,16 @@ const PILLARS = [
   { key: "faith", icon: "🙏", label: "Faith", color: "#FB923C" },
 ];
 const DEFAULT_CAL = [
-  { id: "c1", summary: "Post 2 Reels (Claude Closer)", start: "2026-04-14T09:00:00", end: "2026-04-14T09:15:00", acct: "chanceatfinance@gmail.com" },
+  { id: "c1", summary: "Post 2 Reels", start: "2026-04-14T09:00:00", end: "2026-04-14T09:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c2", summary: "Pipeline Meeting", start: "2026-04-14T10:30:00", end: "2026-04-14T11:30:00", acct: "chance@affloans.com" },
   { id: "c3", summary: "Loan Bro Meeting", start: "2026-04-14T11:00:00", end: "2026-04-14T11:30:00", acct: "chanceatfinance@gmail.com" },
   { id: "c4", summary: "360 Suites Mastermind Workshop", start: "2026-04-14T12:00:00", end: "2026-04-14T14:00:00", acct: "chance@360suitesla.com" },
-  { id: "c5", summary: "Post 2 Reels (Claude Closer)", start: "2026-04-15T09:00:00", end: "2026-04-15T09:15:00", acct: "chanceatfinance@gmail.com" },
+  { id: "c5", summary: "Post 2 Reels", start: "2026-04-15T09:00:00", end: "2026-04-15T09:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c6", summary: "Facebook Group Post #3", start: "2026-04-15T11:00:00", end: "2026-04-15T11:15:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c7", summary: "Post 2 Reels (Claude Closer)", start: "2026-04-16T09:00:00", end: "2026-04-16T09:15:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c8", summary: "Post 2 Reels (Claude Closer)", start: "2026-04-17T09:00:00", end: "2026-04-17T09:15:00", acct: "chanceatfinance@gmail.com" },
+  { id: "c7", summary: "Post 2 Reels", start: "2026-04-16T09:00:00", end: "2026-04-16T09:15:00", acct: "chanceatfinance@gmail.com" },
+  { id: "c8", summary: "Post 2 Reels", start: "2026-04-17T09:00:00", end: "2026-04-17T09:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c9", summary: "GHL Trial Expires Tonight!", start: "2026-04-17T22:44:00", end: "2026-04-17T23:00:00", acct: "chanceatfinance@gmail.com" },
-  { id: "c10", summary: "Post 2 Reels (Claude Closer)", start: "2026-04-18T09:00:00", end: "2026-04-18T09:15:00", acct: "chanceatfinance@gmail.com" },
+  { id: "c10", summary: "Post 2 Reels", start: "2026-04-18T09:00:00", end: "2026-04-18T09:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c11", summary: "Reddit Post #5 — r/realtors", start: "2026-04-19T10:00:00", end: "2026-04-19T10:15:00", acct: "chanceatfinance@gmail.com" },
   { id: "c12", summary: "Week 2 Analytics Review", start: "2026-04-19T18:00:00", end: "2026-04-19T18:30:00", acct: "chanceatfinance@gmail.com" },
   { id: "c13", summary: "Facebook Group Post #4 + #5", start: "2026-04-20T11:00:00", end: "2026-04-20T11:15:00", acct: "chanceatfinance@gmail.com" },
@@ -381,7 +381,7 @@ export default function App() {
   function HubTab() {
     const projects = [
       { name: "First Mortgage Deal", color: CLR.red, priority: "critical", desc: "Close first mortgage deal — 60-day window. 0 pipeline opportunities." },
-      { name: "Claude Closer Content", color: CLR.orange, priority: "high", desc: "2 Reels/day, Facebook group posts, Reddit distribution." },
+      { name: "Content Marketing", color: CLR.orange, priority: "high", desc: "2 Reels/day, Facebook group posts, Reddit distribution for mortgage business." },
       { name: "Referral Partners", color: CLR.orange, priority: "high", desc: "Build from 2 to 10. 12 Tier 1 outreach drafts ready." },
       { name: "360 Executive Suites", color: CLR.lime, priority: "medium", desc: "GM of 4 buildings. Constellation Rd #398 under contract." },
     ];
