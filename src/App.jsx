@@ -266,7 +266,15 @@ export default function App() {
 
   // ── TAB: HOME ───────────────────────────────────────────────────
   function HomeTab() {
-    const todayEvents = DEFAULT_CAL.filter(e => e.start.startsWith(todayStr)).sort((a, b) => a.start.localeCompare(b.start));
+    const [homeCalEvents, setHomeCalEvents] = useState([]);
+    useEffect(() => {
+      fetch("/api/calendar").then(r => r.json()).then(d => setHomeCalEvents(d.events || [])).catch(() => {});
+    }, []);
+    const todayEvents = homeCalEvents.filter(e => e.start?.slice(0, 10) === todayStr).sort((a, b) => a.start.localeCompare(b.start));
+    const [homeEmails, setHomeEmails] = useState([]);
+    useEffect(() => {
+      fetch("/api/emails").then(r => r.json()).then(d => setHomeEmails(d.emails || [])).catch(() => {});
+    }, []);
     return <>
       <div style={{ marginBottom: 16 }}>
         <div style={{ fontSize: 12, color: CLR.muted }}>{new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric", year: "numeric" })}</div>
@@ -310,7 +318,7 @@ export default function App() {
 
       <div style={S.card}>
         <div style={S.section}>Priority Emails</div>
-        {DEFAULT_EMAILS.filter(e => e.priority === "critical" || e.priority === "high").map(e => {
+        {(homeEmails.length > 0 ? homeEmails : DEFAULT_EMAILS).filter(e => e.priority === "critical" || e.priority === "high").map(e => {
           const a = ACCT[e.acct] || { label: "?", color: CLR.muted };
           return <div key={e.id} style={{ display: "flex", gap: 8, alignItems: "flex-start", padding: "6px 0", borderBottom: `1px solid ${CLR.border}` }}>
             <span style={{ fontSize: 12 }}>{e.priority === "critical" ? "🔴" : "🟡"}</span>
@@ -598,11 +606,19 @@ export default function App() {
 
   // ── TAB: CAL ────────────────────────────────────────────────────
   function CalTab() {
+    const [calEvents, setCalEvents] = useState([]);
+    const [calSynced, setCalSynced] = useState(null);
+    useEffect(() => {
+      fetch("/api/calendar").then(r => r.json()).then(d => {
+        setCalEvents(d.events || []);
+        setCalSynced(d.synced_at);
+      }).catch(() => {});
+    }, []);
     const days = Array.from({ length: 7 }, (_, i) => { const d = new Date(); d.setDate(d.getDate() + i); return d.toISOString().slice(0, 10); });
-    const dayEvents = DEFAULT_CAL.filter(e => e.start.startsWith(calDay)).sort((a, b) => a.start.localeCompare(b.start));
+    const dayEvents = calEvents.filter(e => e.start?.slice(0, 10) === calDay).sort((a, b) => a.start.localeCompare(b.start));
     return <>
       <h2 style={{ fontSize: 20, fontWeight: 700, margin: 0 }}>Calendar</h2>
-      <div style={{ fontSize: 11, color: CLR.muted, marginBottom: 12 }}>All 4 accounts</div>
+      <div style={{ fontSize: 11, color: CLR.muted, marginBottom: 12 }}>All accounts{calSynced ? ` · Synced ${new Date(calSynced).toLocaleString()}` : ""}</div>
       <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
         {Object.entries(ACCT).map(([_, { label, color }]) => <div key={label} style={{ display: "flex", alignItems: "center", gap: 4 }}>
           <div style={{ width: 6, height: 6, borderRadius: 3, background: color }} />
