@@ -32,33 +32,61 @@
       "lastUpdated": "2026-04-13T04:00:00Z"
     },
     {
-      "id": "p_content",
-      "name": "Claude Closer Content Launch",
+      "id": "p_content_machine",
+      "name": "Content Machine (Real Estate)",
       "status": "active",
       "priority": "high",
-      "icon": "📸",
-      "color": "#ff1493",
-      "summary": "Week 1 content sprint: 3 Reels/day (drops to 2 after Sat Apr 12), Facebook groups, Reddit posts. Analytics review scheduled Sun Apr 12.",
+      "icon": "🎬",
+      "color": "#ff8c00",
+      "summary": "4 pillars (New Construction 35%, Mortgage 30%, Operator 20%, Local 15%). 13 posts/week. Batch film Mon 9-10:30 + Fri 1-2:30. CapCut + Metricool pipeline.",
       "keyMetrics": {
-        "reelsPosted": 0,
-        "gumroadViews": 0,
-        "tiktokFollowers": 0,
-        "salesTarget": 2
+        "weeklyPostTarget": 13,
+        "tiktokFollowers": 650,
+        "igFollowers": 1900,
+        "builderRelationships": "active (want to expand)"
       },
       "decisions": [
-        { "date": "2026-04-08", "text": "Launch schedule: 3 Reels/day for first 4 days, then 2/day ongoing" },
-        { "date": "2026-04-08", "text": "Platforms: TikTok (reels) + Reddit (text posts) + Facebook groups (value posts)" },
-        { "date": "2026-04-12", "text": "Week 1 Analytics Review to determine TikTok vs Reddit winner" }
+        { "date": "2026-04-15", "text": "4 pillars established: New Construction Insider, Mortgage Made Simple, The Operator, Santa Clarita Local" },
+        { "date": "2026-04-15", "text": "Stack: CapCut Pro ($7.99/mo) + Metricool (free) + Google Drive raw footage folder" },
+        { "date": "2026-04-15", "text": "Batch filming schedule: Monday 9-10:30 AM (studio), Friday 1-2:30 PM (sites/garage)" },
+        { "date": "2026-04-15", "text": "Weekly analytics audit via Sunday Reset agent — pillar weights auto-adjust" }
       ],
       "nextActions": [
-        "Post 2 Reels today",
-        "Week 1 Analytics Review (was scheduled Sun Apr 12)",
-        "Facebook Group Post #3 — listing presentation prompt (Wed Apr 15)"
+        "Set up CapCut Pro + Metricool accounts",
+        "Create Google Drive 'Content Machine' folder",
+        "First Monday batch session",
+        "First Friday batch session at a new construction site"
       ],
       "blockers": [
-        "Content recording avoidance pattern — first piece marked done Apr 13"
+        "CapCut Pro + Metricool not yet set up",
+        "Google Drive folder not created"
       ],
-      "lastUpdated": "2026-04-13T04:00:00Z"
+      "lastUpdated": "2026-04-15T06:15:00Z"
+    },
+    {
+      "id": "p_new_construction",
+      "name": "New Construction Referrals",
+      "status": "active",
+      "priority": "high",
+      "icon": "🏗️",
+      "color": "#ff8c00",
+      "summary": "Active relationships with local builders. Flat referral fees (non-MLS). Goal: expand relationships + generate referral sales.",
+      "keyMetrics": {
+        "activeBuilders": "several",
+        "referralFees": "flat fee, varies by development",
+        "closedReferrals": 0
+      },
+      "decisions": [
+        { "date": "2026-04-15", "text": "New construction is a primary revenue stream alongside mortgage" },
+        { "date": "2026-04-15", "text": "DRE# 02245979 enables referral fees on non-MLS new builds" }
+      ],
+      "nextActions": [
+        "Reach out to 3 new local builders to expand relationships",
+        "Walk new construction site for content + referral intel",
+        "Track builder promotions to surface in content"
+      ],
+      "blockers": [],
+      "lastUpdated": "2026-04-15T06:15:00Z"
     },
     {
       "id": "p_referrals",

@@ -1,7 +1,197 @@
 {
-  "tasks": [],
-  "habits": [],
-  "xpActions": [],
+  "tasks": [
+    {
+      "id": "t_critical_deal",
+      "text": "Close first mortgage deal — 60 day sprint",
+      "cat": "mortgage",
+      "priority": "critical",
+      "status": "doing",
+      "due": "2026-06-14"
+    },
+    {
+      "id": "t_ghl_decision",
+      "text": "GoHighLevel — subscribe or cancel (trial ends 10:44 PM PDT)",
+      "cat": "mortgage",
+      "priority": "critical",
+      "status": "todo",
+      "due": "2026-04-17"
+    },
+    {
+      "id": "t_tier1_outreach",
+      "text": "Review + approve 12 Tier 1 referral partner outreach drafts",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_emilie_activate",
+      "text": "Send Emilie Dujardin co-marketing email (Tier 5 activation)",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_tenant_pitch",
+      "text": "Pitch 360 Suites tenants — 280 warm mortgage leads",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_ghl_import",
+      "text": "Import 1,163 GHL contacts",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_capcut",
+      "text": "Set up CapCut Pro + Metricool accounts",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_gdrive_content",
+      "text": "Create Google Drive 'Content Machine' folder for raw footage",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_batch_mon",
+      "text": "Monday batch film: 2 mortgage tips + 1 operator + 1 local",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_batch_fri",
+      "text": "Friday batch film: 2 new construction walkthroughs + 1 mortgage + 1 car clip",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_verify_leadconnector",
+      "text": "Verify Lead Connector + Gmail Google Account access was intentional",
+      "cat": "mortgage",
+      "priority": "medium",
+      "status": "todo"
+    },
+    {
+      "id": "t_verify_google_recovery",
+      "text": "Verify Google account recovery event Apr 5 at myaccount.google.com",
+      "cat": "personal",
+      "priority": "medium",
+      "status": "todo"
+    },
+    {
+      "id": "t_builder_outreach",
+      "text": "Reach out to 3 new local builders for new construction referrals",
+      "cat": "mortgage",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_constellation",
+      "text": "Constellation Rd #398 — monitor sale progress (under contract)",
+      "cat": "suites",
+      "priority": "medium",
+      "status": "doing"
+    },
+    {
+      "id": "t_loanbro_reschedule",
+      "text": "Loan Bro Meeting — Mike declined Apr 14, accepted Apr 21. Confirm.",
+      "cat": "mortgage",
+      "priority": "medium",
+      "status": "todo"
+    },
+    {
+      "id": "t_mastermind",
+      "text": "Follow up on 360 Suites Mastermind Workshop attendee RSVPs (Ken Keller)",
+      "cat": "suites",
+      "priority": "medium",
+      "status": "todo"
+    },
+    {
+      "id": "t_eos",
+      "text": "Get to EOS — any workout counts (5:15 AM slot)",
+      "cat": "personal",
+      "priority": "high",
+      "status": "todo"
+    },
+    {
+      "id": "t_marek",
+      "text": "Schedule Marek Health baseline labs",
+      "cat": "personal",
+      "priority": "low",
+      "status": "todo"
+    },
+    {
+      "id": "t_dmv",
+      "text": "CA smog check + DMV renewal",
+      "cat": "personal",
+      "priority": "low",
+      "status": "todo",
+      "due": "2026-06-02"
+    },
+    {
+      "id": "t_qe_move",
+      "text": "Move Quantum Edge bot from ~/Desktop/ (TCC blocks launchd there)",
+      "cat": "personal",
+      "priority": "low",
+      "status": "todo"
+    },
+    {
+      "id": "t_anthropic_credits",
+      "text": "Add Anthropic API credits at console.anthropic.com for dispatch briefings",
+      "cat": "mortgage",
+      "priority": "medium",
+      "status": "todo"
+    },
+    {
+      "id": "t_gcal_reauth",
+      "text": "Re-auth Google Calendar refresh token (mortgage-machine broken)",
+      "cat": "mortgage",
+      "priority": "low",
+      "status": "todo"
+    },
+    {
+      "id": "t_render_monitor",
+      "text": "Monitor Render deployment — confirm command-center builds successfully",
+      "cat": "mortgage",
+      "priority": "medium",
+      "status": "doing"
+    }
+  ],
+  "habits": [
+    { "id": "h1", "name": "5:15 Workout", "icon": "💪", "done": false },
+    { "id": "h2", "name": "Mortgage block", "icon": "🏦", "done": false },
+    { "id": "h3", "name": "Content posted", "icon": "🎬", "done": false },
+    { "id": "h4", "name": "Prospecting", "icon": "🎯", "done": false },
+    { "id": "h5", "name": "Family time", "icon": "👨‍👩‍👧", "done": false },
+    { "id": "h6", "name": "Read/Yoga", "icon": "📖", "done": false }
+  ],
+  "xpActions": [
+    { "id": "x1", "pillar": "dad", "name": "Avery bath + bedtime routine", "xp": 15, "done": false },
+    { "id": "x2", "pillar": "dad", "name": "Quality playtime with Avery", "xp": 15, "done": false },
+    { "id": "x3", "pillar": "husband", "name": "Dinner with Tatum (phone away)", "xp": 15, "done": false },
+    { "id": "x4", "pillar": "husband", "name": "Thoughtful gesture for Tatum", "xp": 15, "done": false },
+    { "id": "x5", "pillar": "friend", "name": "Reach out to a friend", "xp": 10, "done": false },
+    { "id": "x6", "pillar": "friend", "name": "Help someone without being asked", "xp": 15, "done": false },
+    { "id": "x7", "pillar": "entrepreneur", "name": "7-8:15 AM mortgage block completed", "xp": 20, "done": false },
+    { "id": "x8", "pillar": "entrepreneur", "name": "Prospecting call or email", "xp": 10, "done": false },
+    { "id": "x9", "pillar": "entrepreneur", "name": "Lead follow-up in GHL", "xp": 15, "done": false },
+    { "id": "x15", "pillar": "entrepreneur", "name": "Content edited + posted", "xp": 10, "done": false },
+    { "id": "x16", "pillar": "entrepreneur", "name": "Batch filmed (Mon/Fri)", "xp": 20, "done": false },
+    { "id": "x10", "pillar": "health", "name": "5:15 AM workout completed", "xp": 20, "done": false },
+    { "id": "x17", "pillar": "health", "name": "Protein shakes (AM + PM)", "xp": 10, "done": false },
+    { "id": "x11", "pillar": "health", "name": "Electrolytes + creatine", "xp": 5, "done": false },
+    { "id": "x12", "pillar": "health", "name": "Clean meals all day", "xp": 10, "done": false },
+    { "id": "x13", "pillar": "faith", "name": "9:30 PM read or yoga", "xp": 15, "done": false },
+    { "id": "x14", "pillar": "faith", "name": "Gratitude / prayer / meditation", "xp": 10, "done": false }
+  ],
   "totalXP": 0,
-  "lastModified": null
+  "lastModified": "2026-04-15T06:15:00Z"
 }
